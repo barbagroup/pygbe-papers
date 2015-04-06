@@ -1,0 +1,149 @@
+%% ****** Start of file aiptemplate.tex ****** %
+%%
+%%   This file is part of the files in the distribution of AIP substyles for REVTeX4.
+%%   Version 4.1 of 9 October 2009.
+%%
+%!TEX encoding = UTF-8 Unicode
+% This is a template for producing documents for use with 
+% the REVTEX 4.1 document class and the AIP substyles.
+% 
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+
+%\documentclass[aip,graphicx]{revtex4-1}
+\documentclass[aip,reprint]{revtex4-1}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % allows using accents directly in text, like ÔøΩ
+\usepackage{subfig}
+\usepackage{xspace}
+
+
+\captionsetup{justification=raggedright,
+singlelinecheck=false
+}
+
+\newcommand{\pygbe}{\texttt{PyGBe}\xspace}
+\newcommand{\gmres}{\textsc{gmres}\xspace}
+\newcommand{\bem}{\textsc{bem}\xspace}
+\newcommand{\ses}{\textsc{ses}\xspace}
+\newcommand{\sam}{\textsc{sam}}
+\newcommand{\gpu}{\textsc{gpu}}
+\newcommand{\cpu}{\textsc{cpu}}
+\newcommand{\apbs}{\textsc{apbs}\xspace}
+\newcommand{\nvidia}{\textsc{nvidia}\xspace}
+\newcommand{\msms}{\texttt{\textsc{msms}}\xspace}
+\newcommand{\amber}{\texttt{\textsc{amber}}\xspace}
+\newcommand{\ccby}{\textsc{cc-by}\xspace}
+
+\graphicspath{{figs/}} %  PATH to figure files-- change to ./ for submission
+
+\draft % marks overfull lines with a black rule on the right
+
+\begin{document}
+
+% Use the \preprint command to place your local institutional report number 
+% on the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+%\preprint{}
+
+\title{Probing protein orientation near charged surfaces with an implicit-solvent model and the \pygbe code} %Title of paper
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current author.
+% Explanatory text should go in the []'s, 
+% actual e-mail address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro for the type of information
+
+% \affiliation command applies to all authors since the last \affiliation command. 
+% The \affiliation command should follow the other information.
+
+\author{Christopher D. Cooper}
+\email[]{cdcooper@bu.edu}
+%\homepage[]{Your web page}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{Department of Mechanical Engineering, Boston University, Boston, MA.}
+
+\author{Lorena A. Barba}
+\email[]{labarba@gwu.edu}
+\affiliation{Department of Mechanical \& Aerospace Engineering, The George Washington University, Washington, DC.}
+
+% Collaboration name, if desired (requires use of superscriptaddress option in \documentclass). 
+% \noaffiliation is required (may also be used with the \author command).
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+\begin{abstract}
+
+Protein-surface interactions are ubiquitous in biological processes and bioengineering, yet are not fully understood. In the field of biosensors, a key factor in biosensor performance is the orientation of biomolecules near charged surfaces. The aim of this work is developing and assessing a computational model to study proteins interacting with charged surfaces and obtain orientation data. After extending the implicit-solvent model used in the open-source code \pygbe\ and deriving an analytical solution for simple geometry, our careful grid-convergence analysis builds confidence on the correctness and value of our approach for probing protein orientation. Further computational experiments support it: they study preferred orientations for protein GB1 D4$^\prime$ and immunoglobulin G. Sampling the free energy for protein GB1 at a range of tilt and rotation angles with respect to the charged surface, we calculated the probability of the protein orientation and observed a dipolar behavior. This result is consistent with published molecular-dynamics simulations and experimental studies using this protein. The case of immunoglobulin G is more challenging due to the large size of the molecule, but it is also more relevant to biosensor technology. The probability distribution of orientations for this protein at varying surface charge and salt concentration suggests that it is easier to control the antibody orientation with low salt concentration and high surface charge. The results also show that local interactions dominate over dipole moment for this protein. In view of its capacity to deal with much larger biomolecules than direct simulation, this implicit-solvent model can offer a valuable approach in biosensor studies.
+
+\end{abstract}
+
+\pacs{}% insert suggested PACS numbers in braces on next line
+
+\maketitle %\maketitle must follow title, authors, abstract and \pacs
+
+% Body of paper.
+
+\section{Introduction}\label{sec:intro}
+\input{introduction}
+
+\section{Implicit-solvent model for proteins near charged surfaces} \label{sec:implicit_solvent}
+\input{model}
+
+\paragraph*{Boundary integral formulation---} \label{sec:bie}
+\input{bem}
+
+
+%=============
+\section{Methods}\label{sec:methods}
+\input{methods} %discretization and treecode
+
+\subsection{Energy calculation} \label{sec:energy}
+\input{energy}
+
+\subsection{Orientation sampling of a protein near a charged surface}  \label{sec:prot_orientation}
+\input{prot_orientation}
+
+
+%=============
+
+
+\section{Analytical solution} \label{sec:analytical_solution}
+\input{analytical_solution}
+
+\section{Results} \label{sec:results}
+\input{results}
+
+\subsection{Reproducibility and data management}
+We have a consistent reproducibility practice that includes releasing code and data associated with a publication. The \pygbe code was released at the time of submitting our previous publication,\cite{CooperBardhanBarba2013} under an MIT open-source license, and we maintain a version-control repository. As with our previous paper, we also release with this work all of the data needed to run the numerical experiments reported here, including running scripts and post-processing code in Python for producing the figures. To support our open-science goals, we prepared such a \emph{``reproducibility package''} for each of the results presented in Figures \ref{fig:error_sphere}, \ref{fig:convergence_1PGB_sensor}, \ref{fig:1PGB_probability}, \ref{fig:1IGT_convergence}, and the probability plots in Figures \ref{fig:1IGT_negcharge} and \ref{fig:1IGT_poscharge}. The included running scripts invoke the \pygbe code with the correct input data and meshes (also included), and post-process the results to give the final figure, all with just one command. Please see the respective captions for a reference to the reproducibility packages, hosted on the \textbf{figshare} repository.
+
+\section{Discussion} \label{sec:discussion}
+\input{discussion}
+
+\section{Conclusion}
+\input{conclusion}
+
+
+
+
+\begin{acknowledgments}
+ This work was supported by ONR via grant \#N00014-11-1-0356 of the Applied Computational Analysis Program. LAB also acknowledges support from NSF CAREER award OCI-1149784 and from NVIDIA, Inc.\ via the CUDA Fellows Program. 
+ We are grateful for many helpful conversations with members of the Materials and Sensors Branch of the Naval Research Laboratory, especially Dr. Jeff M. Byers and Dr. Marc Raphael.
+\end{acknowledgments}
+
+% Create the reference section using BibTeX:
+\bibliography{compbio,bem,scicomp,fastmethods,scbib,biosensors}
+
+\end{document}
