@@ -1,0 +1,9 @@
+%!TEX root = CooperBarba2014.tex
+
+\subsection{Verification with analytical solution} \label{sec:disc_analytical}
+In order to study the interaction of proteins and charged surfaces, we extended \pygbe to account for surfaces with prescribed charge or potential. Unfortunately, there was no analytical solution available in the literature to compare and verify \pygbe's extension. Section \ref{sec:analytical_solution} derives a closed expression for a spherical molecule with a centered charge interacting with a spherical surface, and we used this expression to carry out a grid-convergence study of the interaction energy (Figure \ref{fig:error_sphere}). The error decays with the area, which is the expected behavior \cite{CooperBardhanBarba2013, CooperBarba-share154331} for a boundary element method with constant elements. This study verified that \pygbe solves the mathematical model correctly.
+
+Here, the numerical parameters were all chosen for high accuracy because  discretization error is very small for a spherical geometry. We wanted to make sure that the errors due to integration, the treecode approximation and the \textsc{gmres} solver were even smaller. With more realistic molecular geometries, however, discretization errors are larger and accuracy requirements with \pygbe are relaxed, resulting in lower runtimes.
+
+\subsection{Protein G B1 D4$^\prime$ near a charged surface} \label{sec:disc_1PGB}
+
