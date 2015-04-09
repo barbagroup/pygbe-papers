@@ -2,30 +2,13 @@
 
 Proteins interacting with surfaces and adsorption mechanisms are ubiquitous and play a role in many biological processes. 
 Along its importance in natural activity, like blood coagulation, adsorption affects biotechnologies like tissue engineering, biomedical implants and biosensors.
-Yet, despite their importance, a full understanding of protein-surface interactions remains elusive.\cite{Gray2004,RabeVerdesSeegel2011}
+Yet, despite their importance, a full understanding of protein-surface interactions remains elusive \cite{Gray2004,RabeVerdesSeegel2011}.
 
-In the field of biosensors, protein adsorption needs to be engineered to obtain a successful device. 
-Biosensors detect specific molecules using a nanoscale sensing element, like a metallic nanoparticle or nanowire covered with a bioactive coating. 
-The prevalent way to modify a sensor surface is via a self-assembled monolayer (\sam) of a small charged group, with ligand molecules layered on top to achieve the desired function. 
-Antibodies are a common choice for the ligand molecules, although the newest devices use single-domain or single-chain fragment molecules.\cite{ByunETal2013,TrillingETal2014} 
-Sensing occurs when a target biomolecule binds to the ligand molecule,  changing some physical parameter on the sensor, such as current in nanowires or plasmon resonance frequency in metallic nanoparticles. 
+Implicit-solvent models using the Poisson-Boltzmann equation are popular for computing solvation energies in protein systems \cite{RouxSimonson1999,Bardhan2012}, but few studies have included the effect of surfaces. Lenhoff and co-workers studied surface-protein interactions using continuum models discretized with boundary-element \cite{YoonLenhoff1992,RothLenhoff1993,AsthagiriLenhoff1997} and finite-difference methods \cite{YaoLenhoff2004,YaoLenhoff2005}, in the context of ion-exchange chromatography. They realized that van der Waals effects can be neglected for realistic molecular geometries \cite{RothNealLenhoff1996} and that the model is adequate as long as conformational changes in the protein are slight \cite{YaoLenhoff2004,YaoLenhoff2005}. 
 
-One of the factors affecting biosensor performance is the orientation of ligand molecules.\cite{TajimaTakaiIshihara2011,TrillingBeekwilderZuilhof2013} 
-These have specific binding sites, which need to be accessible to the target molecule for the biosensor to function well.
-Probing protein orientation is thus one key goal of adsorption studies.
-The aim of this study is to develop and assess a computational model to simulate proteins near surfaces and obtain orientation data.
-
-We use an implicit-solvent approach based on the Poisson-Boltzmann equation and fixed protein structures. A sensor element, functionalized with the \sam, can be represented as a charged surface that interacts electrostatically with a biomolecule. Ignoring conformational changes of the biomolecule is justified in this application, since binding sites should remain nearly unmodified during the fabrication process.\cite{TajimaTakaiIshihara2011} 
-
-
-Implicit-solvent models using the Poisson-Boltzmann equation are popular for computing solvation energies in protein systems,\cite{RouxSimonson1999,Bardhan2012} but few studies have included the effect of surfaces. Lenhoff and co-workers studied surface-protein interactions using continuum models discretized with boundary-element\cite{YoonLenhoff1992,RothLenhoff1993,AsthagiriLenhoff1997} and finite-difference methods,\cite{YaoLenhoff2004,YaoLenhoff2005} in the context of ion-exchange chromatography. They realized that van der Waals effects can be neglected for realistic molecular geometries\cite{RothNealLenhoff1996} and that the model is adequate as long as conformational changes in the protein are slight.\cite{YaoLenhoff2004,YaoLenhoff2005} 
-
-As far as we know, the continuum framework has not been used or assessed in the context of protein-orientation studies. 
-One such study used a coarse-grained model of the molecule, represented as  a set of spheres,\cite{ShengTsaoZhouJiang2002,ZhouTsaoShengJiang2004} and others assigned effective charges at the residue level,\cite{FreedCramer2011,ZhouChenJiang2003} or made approximations to account for pH effects.\cite{BiesheuvelvanderVeenNord2005,HartvigdeWeertOstergaartJorgensenJensen2011}
-
-
-We have added the capability of modeling a protein near a charged surface to our code \pygbe , an open-source code\footnote{\url{https://github.com/barbagroup/pygbe}}  that uses \gpu\ hardware.  Previously, we verified and validated \pygbe in its use to obtain solvation and binding energies, by comparing with analytical solutions of the equations and with results obtained using the well-known \apbs software.\cite{CooperBarba-share154331,CooperBardhanBarba2013} 
+We have added the capability of modeling a protein near a charged surface to our code \pygbe, an open-source code\footnote{\url{https://github.com/barbagroup/pygbe}}  that uses \gpu\ hardware.  Previously, we verified and validated \pygbe in its use to obtain solvation and binding energies, by comparing with analytical solutions of the equations and with results obtained using the well-known \apbs software \cite{CooperBarba-share154331,CooperBardhanBarba2013} . 
 In the present work, we derived an analytical solution for a spherical molecule interacting with a spherical charged surface, and used it to verify the code in its new application and study numerical convergence.
-Using the newly extended code, we studied two proteins (GB1 D4' and immunoglobulin-G) near charged surfaces to obtain their preferred orientation, and compared ours and several other published results.
-We anticipate this modeling tool to be useful for understanding the behavior of proteins as they adsorb on \sam s, potentially aiding the design of better ligand molecules for biosensors.
+Using the newly extended code, we studied the interaction between protein GB1 D4' and a charged surface.
 
+We anticipate this modeling tool to be useful for understanding the behavior of proteins as they adsorb on surfaces with self-assembled monolayers (\sam), which can be seen as a surface with imposed charge within an implicit-solvent model. 
+One such application is biosensing, where the target molecule is attached to the sensor through a ligand molecule (in many cases an antibody). The performance of a biosensor is largely affected by the orientation of the ligand molecule \cite{TajimaTakaiIshihara2011,TrillingBeekwilderZuilhof2013}, as the binding sites must be accessible for the target molecule, and orientation studies using this tool can potentially aid the design of better ligand molecules. We explore this application in a companion publication \cite{CooperBarba2015b}.
