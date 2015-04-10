@@ -7,3 +7,37 @@ Here, the numerical parameters were all chosen for high accuracy because  discre
 
 \subsection{Protein G B1 D4$^\prime$ near a charged surface} \label{sec:disc_1PGB}
 
+The results in Figures \ref{fig:convergence_1PGB_isolated} and \ref{fig:convergence_1PGB_sensor} show the applicability of this approach in more realistic situations. The setting in Figure \ref{fig:protein_surface} can well be a nanostructure coated with a self-assembled monolayer (\sam) interacting with a protein that will adsorb on that surface.
+
+Figures \ref{fig:convergence_1PGB_isolated} and \ref{fig:convergence_1PGB_sensor} show the expected 1/N convergence, indicating that the code is resolving the mathematical model correctly. Just like in the case of the sphere, the simple geometry of the charged surface forced us to use very fine parameters in order to see the correct order of convergence. If we needed to perform this computation many times, for example, to sample different protein orientations, it would be impractical with these paremeters due to the long computational time. 
+
+The extrapolated values in Table \ref{table:extraPGB} are useful to find more relaxed parameters that still give acceptable results. For example, using a mesh density of 2 elements per square angstrom on the charged surface and 4 elements per square angstrom on the protein, and the parameters detailed in Table \ref{table:params3}, we get the results in Table \ref{table:relaxPGB}. These results are less than 2\% away from those in Table \ref{table:extraPGB}, and each run takes less than one minute. Moreover, using the energy values from Table \ref{table:relaxPGB} the interaction free energy is $-7.61$ [kcal/mol], which is very close to the extrapolated case ($-7.6$ [kcal/mol]).
+
+\begin{table}[h]
+  %\centering
+   %\fontfamily{ppl}\selectfont
+   \caption{\label{table:params3}Numerical parameters for relaxed runs with protein G B1 D4$^{\prime}$. } 
+    \begin{tabular}{c c c c c c c}
+    \hline%\toprule
+    \multicolumn{3}{l} {\# Gauss points:} & \multicolumn{3}{l}{Treecode:} & \gmres:\\
+    \footnotesize{in-element} & \footnotesize{close-by} & \footnotesize{far-away} & $N_{\text{crit}}$ & $P$ &  $\theta$  & tol.\\
+    \hline%\midrule
+    9 per side & 19 & 1  &  300 & 4 & 0.5  & $10^{-5}$\\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+  %\centering
+   %\fontfamily{ppl}\selectfont
+   \caption{\label{table:relaxPGB}Values of energy for protein G B1 D4$^\prime$ using the parameters in Table \ref{table:params3}, and a mesh density of 4 elements per square angstrom in the protein and 2 elements per square angstrom on the charged surface}
+    \begin{tabular}{c c c}
+    \hline%\toprule
+    & \multicolumn{2}{c} {Energy [kcal/mol]} \\
+    & Solvation & Surface \\
+    \hline%\midrule
+    Isolated    & $-221.56$ & $315.33$ \\
+    Interacting & $-225.81$ & $311.96$ \\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}

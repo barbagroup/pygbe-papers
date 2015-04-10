@@ -1,12 +1,12 @@
 %!TEX root = CooperBarba2014.tex
 
-It is possible to derive a closed-form expression for the free energy of interaction between a spherical molecule with a centered charge and a spherical surface with imposed potential or charge, like the one sketched in Figure \ref{fig:twosphere_an}.  There are such analytical expressions for interacting charged surfaces,\cite{CarnieChanGunning1994} and interacting spherical molecules with multiple point charges inside,\cite{LotanHead-Gordon2006} but not for a situation where surfaces and molecules interact. Having such an analytical solution is of great utility in the development of a computational model for protein-surface interaction, because it will allow for proper code verification. 
+It is possible to derive a closed-form expression for the free energy of interaction between a spherical molecule with a centered charge and a spherical surface with imposed potential or charge, like the one sketched in Figure \ref{fig:twosphere_an}.  There are such analytical expressions for interacting charged surfaces \cite{CarnieChanGunning1994}, and interacting spherical molecules with multiple point charges inside \cite{LotanHead-Gordon2006}, but not for a situation where surfaces and molecules interact. Having such an analytical solution is of great utility in the development of a computational model for protein-surface interaction, because it will allow for proper code verification. 
 
 
 \subsection{Expansion in Legendre polynomials} \label{sec:expansion_analytical}
 
 
-The system of partial differential equations from Equation \eqref{eq:pde}  models the electrostatic potential field in the setting of Figure \ref{fig:twosphere_an}. Following Carnie and co-workers, \cite{CarnieChanGunning1994} the axial symmetry lets us formulate the solution of Equation \eqref{eq:pde} as an expansion in Legendre polynomials:
+The system of partial differential equations from Equation \eqref{eq:pde}  models the electrostatic potential field in the setting of Figure \ref{fig:twosphere_an}. Following Carnie and co-workers \cite{CarnieChanGunning1994}, the axial symmetry lets us formulate the solution of Equation \eqref{eq:pde} as an expansion in Legendre polynomials:
  
 
 \begin{align} \label{eq:derivation1}
@@ -27,7 +27,7 @@ The system of partial differential equations from Equation \eqref{eq:pde}  model
 \end{figure}
  
 
-We make use of the following addition formula, \cite{MarceljaMitchellNinhamSculley1977}
+We make use of the following addition formula \cite{MarceljaMitchellNinhamSculley1977},
 %
 \begin{equation} \label{eq:addition_formula}
 k_n(\kappa r_2) P_n(\cos \theta_2) = \sum_{m=0}^{\infty}(2m+1) B_{nm} i_m(\kappa r_1) P_m(\cos \theta_1),
