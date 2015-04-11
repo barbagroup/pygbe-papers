@@ -1,0 +1,45 @@
+%!TEX root = CooperBarba2014.tex
+
+\subsection{Verification with analytical solution} \label{sec:disc_analytical}
+In order to study the interaction of proteins and charged surfaces, we extended \pygbe to account for surfaces with prescribed charge or potential. Unfortunately, there was no analytical solution available in the literature to compare and verify \pygbe's extension. Section \ref{sec:analytical_solution} derives a closed expression for a spherical molecule with a centered charge interacting with a spherical surface, and we used this expression to carry out a grid-convergence study of the interaction energy (Figure \ref{fig:error_sphere}). The error decays with the area, which is the expected behavior \cite{CooperBardhanBarba2013, CooperBarba-share154331} for a boundary element method with constant elements. This study verified that \pygbe solves the mathematical model correctly.
+
+Here, the numerical parameters were all chosen for high accuracy because  discretization error is very small for a spherical geometry. We wanted to make sure that the errors due to integration, the treecode approximation and the \textsc{gmres} solver were even smaller. With more realistic molecular geometries, however, discretization errors are larger and accuracy requirements with \pygbe are relaxed, resulting in lower runtimes.
+
+\subsection{First case: protein G B1 D4$^\prime$} \label{sec:disc_1PGB}
+
+The orientation of protein G B1 D4$^\prime$ near charged surfaces was studied using molecular dynamics (MD) simulations by Liu and co-workers\cite{LiuLiaoZhou2013} and  experimentally by Baio and co-workers.\cite{BaioWeidnerBaughGambleStaytonCastner2012} The availability of these published results was a motivation to test \pygbe using this protein. 
+
+The results presented in Figure \ref{fig:1PGB_probability} show that for the most likely orientations, the dipole-moment vector is aligned with the vector normal to the interacting surface. This indicates that the dipole moment is the dominant effect that determines the protein's orientation, over local protein-surface  interactions. This result is unsurprising, since protein G B1 D4$^\prime$ is a relatively small biomolecule. 
+
+Moreover, Figure \ref{fig:1PGB_probability} reveals that protein G B1 D4$^\prime$ behaves like a point dipole, as the most likely orientations shift 180$^\circ$ when the sign of the surface charge is flipped. This is also explained by the dipole moment dominating the orientation.
+
+The dipolar behavior described by our calculations with \pygbe agrees with the experiments done by Baio and co-workers, \cite{BaioWeidnerBaughGambleStaytonCastner2012} in which they observed opposite orientations of protein G B1 D4$^\prime$ adsorbed on NH$_3^+$ and COO$^-$ self-assembled monolayers. With positively charged surfaces, most of the proteins oriented with the N-terminal of the protein pointing away from the surface, while for negatively charged surfaces the opposite occurred, with the C-terminal pointing away from the surface. This agrees with our results in Figure \ref{fig:1PGB_probability} since the dipole moment vector of protein G B1 D4$^\prime$ points from the C-terminal to the N-terminal.
+
+Liu and co-workers \cite{LiuLiaoZhou2013} used MD simulations to obtain $<\cos(\alpha_{\text{tilt}})>=0.95$ for $\sigma = 0.05$C/m$^2$, and $<\cos(\alpha_{\text{tilt}})>=-0.85\pm0.05$ for $\sigma = -0.05$C/m$^2$, which agrees well with our results in Table \ref{table:avg}. MD simulations consider van der Waals interactions and conformational changes of the protein, whereas these are not considered in our approach, explaining the slight differences in $<\cos(\alpha_{\text{tilt}})>$.
+
+ \subsection{Second case: immunoglobulin G}
+ 
+ With the extension of \pygbe verified with an analytical solution (Section \ref{sec:disc_analytical}) and confirmation that the implicit-solvent model can be used to study protein-surface interaction with a small protein (Section \ref{sec:disc_1PGB}), we proceeded to explore the effect of surface charge and salt concentration on the orientation of the antibody immunoglobulin G. Antibodies are widely used in biosensors as ligand molecules, due to their affinity and specificity with the target molecule (antigen), and it is vitally important that they are adsorbed on the sensor with the fragment antigen-binding (Fab) pointing away from the sensor, into the incoming flow containing the antigens.
+ 
+ Figures \ref{fig:1IGT_negcharge} and \ref{fig:1IGT_poscharge} present the probability distribution of immunoglobulin G for many orientations (given by $\alpha_\text{tilt}$ and $\alpha_\text{rot}$) varying the surface charge ($\sigma$) and salt concentration ($\kappa$). Figures \ref{fig:1IGT_2D_sig-005} and \ref{fig:1IGT_2D_sig005} show that for low surface charge ($\sigma \pm 0.05$C/m$^2$) and high salt concentration ($\kappa=0.125$\AA$^{-1}$), there is no clear preferred orientation, to the point that the most likely orientation has a probability of around 10\%. This means that adsorbing the antibodies under these conditions would result in a wide range of orientations, which is not favorable for biosensor fabrication.
+ 
+ \medskip
+ 
+ \paragraph*{Effect of surface charge---}
+ 
+ With greater surface charge, in this case $\sigma=\pm0.2$C/m$^2$, the orientation probability distribution gets narrower for positive surface charge, and is maintained for negative surface charge. Figure \ref{fig:1IGT_2D_sig020_kappa01250} shows a much clearer preferred orientation, with a probability more than 5$\times$ higher for positive surface charge at high salt concentration. For low salt concentrations (Figures \ref{fig:1IGT_2D_sig-020_kappa003125} and \ref{fig:1IGT_2D_sig020_kappa003125}), this effect is even larger. 
+ 
+The results presented on Figures \ref{fig:1IGT_negcharge} and \ref{fig:1IGT_poscharge} also show that increasing the surface charge has very little effect on the dipole moment orientation. This is evidence that, in contrast to the case of protein G B1 D4$^\prime$, local interactions dominate over the dipole moment. If the dipole moment were the dominant effect, the dipole moment vector would tend to align to the surface normal as the surface charge increases.
+ 
+ \medskip
+ 
+ \paragraph*{Effect of salt concentration---}
+ 
+ We also varied the Debye length ($\kappa^{-1}$) four-fold. In terms of salt concentration, it means a 16$\times$ decrease in the amount of salt. 
+ 
+ Like increasing the surface charge, lowering the salt concentration narrows the orientation probability distribution. For $\sigma=\pm0.05$C/m$^2$ (Fig.~\ref{fig:1IGT_2D_sig-005_kappa003125} and Fig.~\ref{fig:1IGT_2D_sig005_kappa003125}), the effect on positive or negative surface charge is very similar: the preferred orientation is about 2$\times$ more likely. However, for $\sigma=\pm0.2$C/m$^2$, the increase is larger with negative surface charge (Fig.~\ref{fig:1IGT_2D_sig-020_kappa003125}), than with positive surface charge (Fig.~\ref{fig:1IGT_2D_sig020_kappa003125}). The narrower probability distribution is explained by the lower shielding effect caused by the reduced salt content, which at the same time increases the electrostatic interaction.
+
+From the results in Figure \ref{fig:1IGT_negcharge} and Figure \ref{fig:1IGT_poscharge}, we can conclude that it is easier to control the antibody orientation with low salt concentration and high surface charge, because the orientation probability distribution is the narrowest. In our results, Figures \ref{fig:1IGT_3D_sig-02_kap003125_til124-rot140} and \ref{fig:1IGT_3D_sig02_kap003125_til076-rot160} show the orientation of the antibody at the lowest salt concentration and higher surface charge, but only the orientation in Figure \ref{fig:1IGT_3D_sig02_kap003125_til076-rot160}, with positive surface charge, is favorable for biosensing applications, since the Fab fragments are pointing up.
+
+That favorable orientations for biosensing applications are best obtained with high positive surface charge and low salt concentration is consistent with experimental observations by Chen and co-workers. \cite{ChenLiuZhouJiang2003} These researchers developed a coarse-grained method known as the united residue model,\cite{ZhouChenJiang2003} which qualitatively aligns with our results.
+ 
