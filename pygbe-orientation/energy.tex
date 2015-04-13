@@ -9,12 +9,12 @@ Figure \ref{fig:molecule_surface} shows an arrangement with three types of free 
 The Coulombic energy arises simply from the Coulomb interactions of all point charges. We compute it simpy by
 
 \begin{equation} \label{eq:coul_energy}
-F_\text{Coulomb} = \frac{1}{2} \sum_j^N\sum^N_{\substack{i\\ i\neq j}} q_iq_j\frac{1}{4\pi |\mathbf{r}_i-\mathbf{r}_j|}
+F_\text{Coulomb} = \frac{1}{2} \sum_j^{N_q}\sum^{N_q}_{\substack{i\\ i\neq j}} q_iq_j\frac{1}{4\pi |\mathbf{r}_i-\mathbf{r}_j|}
 \end{equation}
 
 \paragraph*{Solvation free energy---}
 
-The solvation energy is the energy contribution of the protein's surroundings: solvent polarization, charged surfaces, and other proteins. We compute is as
+The solvation energy is the energy contribution of the protein's surroundings: solvent polarization, charged surfaces, and other proteins. We compute it as
 
 \begin{align} \label{eq:solv_energy}
 F_{\text{solv}} &= \frac{1}{2} \int_{\Omega} \rho \,(\phi_{\text{total}} - \phi_{\text{Coulomb}}) \\
