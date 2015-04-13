@@ -1,7 +1,7 @@
 
 %!TEX root = CooperBarba2014.tex
 
-\subsection{Discretization}
+\subsection{Discretization and implementation details}
 
  \begin{figure}[b]
    \centering
@@ -17,6 +17,6 @@ K_{L,ij} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mat
 V_{L,ij} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j.
 \end{align}
 
-In our numerical solution, integrals are calculated in three ways, depending on how close the panel is to the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique, \cite{ZhuHuangSongWhite2001} with Gauss points placed along the edges of the element. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot \text{Area}}$--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond a distance of $2L$, elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
+We compute the integrals in Equation \eqref{eq:layers_element} in three ways, depending on the distance between the panel and the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique, \cite{ZhuHuangSongWhite2001} with Gauss points placed along the edges of the element. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot \text{Area}}$--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond that,  elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
 
-We solve the resulting linear system with a general minimal residual method (\gmres). We accelerate the matrix-vector product in each iteration of the \gmres using a treecode algorithm, making the computer time scale as $O(N\log N)$, rather than the naive $O(N^2)$. More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}
+We solve the resulting linear system with a general minimal residual method (\gmres). The most time consuming part of the \gmres is a matrix-vector multiplication (an $O(N^2)$ operation) done every iteration of the solver, which we approximate in $O(N\log N)$ time with a treecode algorithm\cite{BarnesHut1986}. More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}

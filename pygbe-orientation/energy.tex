@@ -1,8 +1,16 @@
 %!TEX root = CooperBarba2014.tex
 
-Figure \ref{fig:molecule_surface} shows an arrangement with three types of free energy: Coulombic energy from the point charges, surface energy due to $\Gamma_2$ and solvation energy. The Coulombic energy arises simply from the Coulomb interactions of all point charges. This section describes how we compute the other two components of free energy in the boundary-element framework.
+Figure \ref{fig:molecule_surface} shows an arrangement with three types of free energy: Coulombic energy from the point charges, surface energy due to $\Gamma_2$ and solvation energy. 
 
 \medskip
+
+\paragraph*{Coulombic energy---}
+
+The Coulombic energy arises simply from the Coulomb interactions of all point charges. We compute it simpy by
+
+\begin{equation} \label{eq:coul_energy}
+F_\text{Coulomb} = \frac{1}{2} \sum_j^N\sum^N_{\substack{i\\ i\neq j}} q_iq_j\frac{1}{4\pi |\mathbf{r}_i-\mathbf{r}_j|}
+\end{equation}
 
 \paragraph*{Solvation free energy---}
 
@@ -13,7 +21,7 @@ F_{\text{solv}} &= \frac{1}{2} \int_{\Omega} \rho \,(\phi_{\text{total}} - \phi_
 &= \sum_{k=0}^{N_q} q_k (\phi_{\text{total}} - \phi_{\text{Coulomb}})(\mathbf{r}_k),
 \end{align}
 
-\noindent where $\rho$ is the charge distribution, consisting of point charges (which transforms the integral into a sum). And $phi_\text{reac} = \phi_{\text{total}} - \phi_{\text{Coulomb}}$ is
+\noindent where $\rho$ is the charge distribution, consisting of point charges (which transforms the integral into a sum), and $\phi_\text{reac} = \phi_{\text{total}} - \phi_{\text{Coulomb}}$ is
 %
 \begin{equation} \label{eq:phi_reac_bem}
 \phi_{\text{reac},\mathbf{r}_k} = -K_{L}^{\mathbf{r}_k}(\phi_{1,\Gamma_1}) + V_{L}^{\mathbf{r}_k} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1,\Gamma_1} \right) 
@@ -21,7 +29,7 @@ F_{\text{solv}} &= \frac{1}{2} \int_{\Omega} \rho \,(\phi_{\text{total}} - \phi_
 
 \paragraph*{Surface free energy---}
 
-Chan and co-workers \cite{ChanMitchell1983,CarnieChan1993} derived the free energy for a surface with a set charge. They describe the free energy on a surface as
+We use the derivation of free energy of a surface with prescribed charge from Chan and co-workers \cite{ChanMitchell1983,CarnieChan1993}. They describe the free energy on a surface as
 
 \begin{equation} \label{eq:energy_surf}
 F = \frac{1}{2} \int_{\Gamma} G_c \sigma_0^2 d\Gamma 

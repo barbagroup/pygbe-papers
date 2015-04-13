@@ -20,11 +20,11 @@ K_{Y}^{\Gamma_2}(\phi_{2,\Gamma_2}) +  V_{Y}^{\Gamma_2} \left( -\frac{\sigma_0}{
 
 %
 \begin{align} \label{eq:layers}
-K_{L/Y}^{\Omega_i}(\phi_{i,\Gamma_j}) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_{L/Y}(\mathbf{r}_{\Omega_i},\mathbf{r}_{\Gamma_j}) \right]\phi_{i,\Gamma_j} \, \mathrm{d} \Gamma, \nonumber \\
-V_{L/Y}^{\Omega_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} \right) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} G_{L/Y}(\mathbf{r}_{\Omega_i},\mathbf{r}_{\Gamma_j})  \, \mathrm{d} \Gamma,
+K_{L/Y}^{\Gamma_k}(\phi_{i,\Gamma_j}) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_{L/Y}(\mathbf{r}_{\Gamma_k},\mathbf{r}_{\Gamma_j}) \right]\phi_{i,\Gamma_j} \, \mathrm{d} \Gamma, \nonumber \\
+V_{L/Y}^{\Gamma_k} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} \right) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} G_{L/Y}(\mathbf{r}_{\Gamma_k},\mathbf{r}_{\Gamma_j})  \, \mathrm{d} \Gamma,
 \end{align}
 
-\noindent corresponding to the double- and single-layer potentials of $\phi_{i,\Gamma_j}$ and $\frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j}$ evaluated in the region $\Omega_i$. The functions $G_L$ and $G_Y$ are the free-space Green's functions of the Poisson (Laplace kernel) and linearized Poisson-Boltzmann (Yukawa kernel) equations, respectively. Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
+\noindent corresponding to the double- and single-layer potentials of $\phi_{i,\Gamma_j}$ and $\frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j}$ evaluated at a point on the surface $\Gamma_k$. The functions $G_L$ and $G_Y$ are the free-space Green's functions of the Poisson (Laplace kernel) and linearized Poisson-Boltzmann (Yukawa kernel) equations, respectively. Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
 %
  \begin{align} \label{eq:matrix_dphi}
  \left[
@@ -48,11 +48,10 @@ V_{L/Y}^{\Omega_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j}
     \end{matrix}
     \right].
  \end{align}
- 
-The boundary-integral representation of the implicit-solvent model is a popular choice to compute solvation energies of proteins.\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} One notable example is the work by Lenhoff\cite{YoonLenhoff1992} where they include the effect of charged surfaces, however, their formulation considers only infinite-sized surfaces. 
 
 This formulation can be extended to account for Stern layers and solvent-filled cavities, by adding more surfaces or interfaces. In our code, we deal with multiple surfaces in the manner presented by Altman and co-workers,\cite{AltmanBardhanWhiteTidor09} as described in our previous paper.\cite{CooperBardhanBarba2013}
 
+The boundary-integral formulation of the implicit-solvent model is a popular alternative to compute solvation energies of proteins,\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} but little work includes the effect of charged surfaces. Moreover, the efforts that do include them\cite{YoonLenhoff1992} are limited to plane, infinite-sized surfaces. 
 
 
 %%%%===================================
