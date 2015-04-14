@@ -1,6 +1,6 @@
 %!TEX root = CooperBarba2014.tex
 
-Protein adsorption plays an important role in many biological processes, like blood coagulation, and biotechnological applications, such as tissue engineering, biomedical implants and biosensors.
+Protein adsorption plays an important role in many biotechnological applications, such as tissue engineering, biomedical implants and biosensors.
 Yet, despite their importance, a full understanding of the specific mechanisms remains elusive.\cite{Gray2004,RabeVerdesSeegel2011}
 
 In the field of biosensors, protein adsorption needs to be engineered to obtain a successful device. 
@@ -14,10 +14,10 @@ These have specific binding sites, which need to be accessible to the target mol
 Probing protein orientation is thus one key goal of adsorption studies.
 The aim of this study is to develop and assess a computational model to simulate proteins near surfaces and obtain orientation data.
 
-Previous studies on protein surface interaction using the Poisson-Boltzmann equation have shown that the model is adequate as long as conformational changes in the protein are slight,\cite{YaoLenhoff2004,YaoLenhoff2005} and that for realistic molecular geometries van der Waals effects can be neglected.\cite{RothNealLenhoff1996}
-This continuum framework has been used in the past for protein orientation studies,\cite{JufferArgosDevlieg1996} however, they include ions explicitly. Other studies used a coarse-grained model of the molecule, represented as  a set of spheres,\cite{ShengTsaoZhouJiang2002,ZhouTsaoShengJiang2004} assigned effective charges at the residue level,\cite{FreedCramer2011,ZhouChenJiang2003} or made approximations to account for pH effects.\cite{BiesheuvelvanderVeenNord2005,HartvigdeWeertOstergaartJorgensenJensen2011}
-
 We use an implicit-solvent approach based on the Poisson-Boltzmann equation and fixed protein structures. A sensor element, functionalized with the \sam, can be represented as a charged surface that interacts electrostatically with a biomolecule. Ignoring conformational changes of the biomolecule is justified in this application, since binding sites should remain nearly unmodified during the fabrication process.\cite{TajimaTakaiIshihara2011} 
+
+Previous studies on protein-surface interaction using the Poisson-Boltzmann equation have shown that the model is adequate as long as conformational changes in the protein are slight,\cite{YaoLenhoff2004,YaoLenhoff2005} and that for realistic molecular geometries van der Waals effects can be neglected.\cite{RothNealLenhoff1996}
+A similar continuum framework has been used in the past for protein orientation studies,\cite{JufferArgosDevlieg1996} however, it includes ions explicitly. Other studies used a coarse-grained model of the molecule, represented as  a set of spheres,\cite{ShengTsaoZhouJiang2002,ZhouTsaoShengJiang2004} assigned effective charges at the residue level,\cite{FreedCramer2011,ZhouChenJiang2003} or made approximations to account for pH effects.\cite{BiesheuvelvanderVeenNord2005,HartvigdeWeertOstergaartJorgensenJensen2011}
 
 We have added the capability of modeling a protein near a charged surface to our code \pygbe , an open-source code\footnote{\url{https://github.com/barbagroup/pygbe}}  that uses \gpu\ hardware.  Previously, we verified and validated \pygbe in its use to obtain solvation and binding energies, by comparing with analytical solutions of the equations and with results obtained using the well-known \apbs software.\cite{CooperBarba-share154331,CooperBardhanBarba2013} 
 This extension was recently verified against an analytical solution valid for a spherical molecule interacting with a spherical charged surface.\cite{CooperBarba2015a}
