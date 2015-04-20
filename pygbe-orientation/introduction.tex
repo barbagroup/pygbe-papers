@@ -1,7 +1,7 @@
-%!TEX root = CooperBarba2014.tex
+%!TEX root = CooperBarba-orientation.tex
 
-Protein adsorption plays an important role in many biotechnological applications, such as tissue engineering, biomedical implants and biosensors.
-Yet, despite their importance, a full understanding of the specific mechanisms remains elusive.\cite{Gray2004,RabeVerdesSeegel2011}
+Protein adsorption plays a key role in many biotechnological applications, particularly biomaterials and tissue engineering, biomedical implants and biosensors.
+Yet, despite their importance, the specific mechanisms governing protein-surface interactions are not fully understood\cite{Gray2004,RabeVerdesSeegel2011}
 
 In the field of biosensors, protein adsorption needs to be engineered to obtain a successful device. 
 Biosensors detect specific molecules using a nanoscale sensing element, like a metallic nanoparticle or nanowire covered with a bioactive coating. 
@@ -9,18 +9,16 @@ The prevalent way to modify a sensor surface is via a self-assembled monolayer (
 Antibodies are a common choice for the ligand molecules, although the newest devices use single-domain or single-chain fragment molecules.\cite{ByunETal2013,TrillingETal2014} 
 Sensing occurs when a target biomolecule binds to the ligand molecule,  changing some physical parameter on the sensor, such as current in nanowires or plasmon resonance frequency in metallic nanoparticles. 
 
-One of the factors affecting biosensor performance is the orientation of ligand molecules.\cite{TajimaTakaiIshihara2011,TrillingBeekwilderZuilhof2013} 
+One of the factors crucially affecting biosensor performance is the orientation of ligand molecules.\cite{TajimaTakaiIshihara2011,TrillingBeekwilderZuilhof2013} 
 These have specific binding sites, which need to be accessible to the target molecule for the biosensor to function well.
 Probing protein orientation is thus one key goal of adsorption studies.
-The aim of this study is to develop and assess a computational model to simulate proteins near surfaces and obtain orientation data.
+The aim of this study is to probe the preferred orientation of proteins near solid charged surfaces by means of an electrostatic model and energy methods. Our model for proteins interacting with charged surfaces was recently verified against an analytical solution valid for spherical geometries.\cite{CooperBarba2015a}
 
-We use an implicit-solvent approach based on the Poisson-Boltzmann equation and fixed protein structures. A sensor element, functionalized with the \sam, can be represented as a charged surface that interacts electrostatically with a biomolecule. Ignoring conformational changes of the biomolecule is justified in this application, since binding sites should remain nearly unmodified during the fabrication process.\cite{TajimaTakaiIshihara2011} 
+Previous studies on protein-surface interaction using the Poisson-Boltzmann equation showed that such a model is adequate as long as conformational changes in the protein are slight,\cite{YaoLenhoff2004,YaoLenhoff2005} and also that van der Waals effects can be neglected for realistic molecular geometries.\cite{RothNealLenhoff1996}
+Conformational changes of the biomolecule can be ignored in this case because binding sites need to remain nearly unmodified during the biosensor fabrication process.\cite{TajimaTakaiIshihara2011} 
+A continuum framework has been used in the past to study protein orientation,\cite{JufferArgosDevlieg1996} but it included ions explicitly. Other studies have used a coarse-grained model of the molecule, represented as  a set of spheres,\cite{ShengTsaoZhouJiang2002,ZhouTsaoShengJiang2004} assigned effective charges at the residue level,\cite{FreedCramer2011,ZhouChenJiang2003} or made approximations to account for pH effects.\cite{BiesheuvelvanderVeenNord2005,HartvigdeWeertOstergaartJorgensenJensen2011}
 
-Previous studies on protein-surface interaction using the Poisson-Boltzmann equation have shown that the model is adequate as long as conformational changes in the protein are slight,\cite{YaoLenhoff2004,YaoLenhoff2005} and that for realistic molecular geometries van der Waals effects can be neglected.\cite{RothNealLenhoff1996}
-A similar continuum framework has been used in the past for protein orientation studies,\cite{JufferArgosDevlieg1996} however, it includes ions explicitly. Other studies used a coarse-grained model of the molecule, represented as  a set of spheres,\cite{ShengTsaoZhouJiang2002,ZhouTsaoShengJiang2004} assigned effective charges at the residue level,\cite{FreedCramer2011,ZhouChenJiang2003} or made approximations to account for pH effects.\cite{BiesheuvelvanderVeenNord2005,HartvigdeWeertOstergaartJorgensenJensen2011}
-
-We have added the capability of modeling a protein near a charged surface to our code \pygbe , an open-source code\footnote{\url{https://github.com/barbagroup/pygbe}}  that uses \gpu\ hardware.  Previously, we verified and validated \pygbe in its use to obtain solvation and binding energies, by comparing with analytical solutions of the equations and with results obtained using the well-known \apbs software.\cite{CooperBarba-share154331,CooperBardhanBarba2013} 
-This extension was recently verified against an analytical solution valid for a spherical molecule interacting with a spherical charged surface.\cite{CooperBarba2015a}
-In the present work, we studied two proteins (GB1 D4' and immunoglobulin-G) near charged surfaces to obtain their preferred orientation, and compared them to several other published results.
-We anticipate this modeling tool to be useful for understanding the behavior of proteins as they adsorb on \sam s, potentially aiding the design of better ligand molecules for biosensors.
+The sensor element (functionalized with the \sam) is represented in our model as a charged surface that interacts electrostatically with the biomolecule. A parameter sweep of the protein's rotation and tilt angles with respect to the solid surface provide energy landscapes, where the probability of finding the system in a given micro-state depends on the total free energy.
+In this work, we studied the preferred orientations of two proteins: GB1 D4' and immunoglobulin-G. In the first case, we are able to compare the results qualitatively with published works, both using modeling and experimental methods. In the second case, the protein is relevant for biosensor applications, but its large size would make molecular simulations quite cumbersome and expensive. The continuum approach, however, can provide insights to the conditions (surface charge and salt concentration) conducive to a favorable orientation of the protein. 
+Future work with this modeling approach may thus aid in the design of better ligand molecules for biosensors.
 
