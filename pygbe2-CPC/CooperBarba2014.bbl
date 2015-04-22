@@ -52,16 +52,16 @@ C.~M. Roth, B.~L. Neal, A.~M. Lenhoff, Van del {W}aals interactions involving
 C.~D. Cooper, L.~A. Barba, Validation of the \texttt{{PyGBe}} code for
   {P}oisson-{B}oltzmann equation with boundary element methods, Technical
   Report on \textbf{figshare}, CC-BY license,
-  \href{http://dx.doi.org/10.6084/m9.figshare.154331}{doi:10.6084/m9.figshare.%
-154331} (January 25 2013).
+  \href{http://dx.doi.org/10.6084/m9.figshare.154331}{doi:10.6084/m9.figshare.154331}
+  (January 25 2013).
 \newblock \href {http://dx.doi.org/10.6084/m9.figshare.154331}
   {\path{doi:10.6084/m9.figshare.154331}}.
 
 \bibitem{CooperBardhanBarba2013}
 C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
-  using {Python}, {GPU}s and boundary elements that can handle solvent-filled
-  cavities and {S}tern layers., Comput. Phys. Commun. 185~(3) (2014) 720---729,
-  preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
+  using python, {GPU}s and boundary elements that can handle solvent-filled
+  cavities and {S}tern layers., Comput. Phys. Commun.Published online. Preprint
+  on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
 \newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
   {\path{doi:10.1016/j.cpc.2013.10.028}}.
 
@@ -92,9 +92,9 @@ B.~Lu, X.~Cheng, J.~Huang, J.~A. McCammon, Order {$N$} algorithm for
   {\path{doi:10.1073/pnas.0605166103}}.
 
 \bibitem{BajajETal2011}
-C.~Bajaj, S.~C. Chen, A.~Rand, An efficient higher-order fast multipole
-  boundary element solution for {Poisson-Boltzmann}-based molecular
-  electrostatics, SIAM J. Sci. Comput. 33~(2) (2011) 826--848.
+C.~Bajaj, S.~C. Chen, A.~Rand, An efficient higher-order fast multipol boundary
+  element solution for poisson-boltzmann-based molecular electrostatics, SIAM
+  Journal of Scientific Computing 33~(2).
 
 \bibitem{AltmanBardhanWhiteTidor09}
 M.~D. Altman, J.~P. Bardhan, J.~K. White, B.~Tidor, Accurate solution of
@@ -149,11 +149,6 @@ S.~L. Carnie, D.~Y. Chan, J.~S. Gunning, Electrical double layer interaction
   plate: The linearized poisson-boltzmann theory, Langmuir 10 (1994)
   2993--3009.
 
-\bibitem{LotanHead-Gordon2006}
-I.~Lotan, T.~Head-Gordon, An analytical electrostatic model for salt screened
-  interactions between multiple proteins, J. Chem.\ Theory Comput. 2~(3) (2006)
-  541--555.
-
 \bibitem{MarceljaMitchellNinhamSculley1977}
 S.~Marcelja, D.~J. Mitchell, B.~W. Ninham, M.~J. Sculley, Role of solvent
   structure in solution theory, J.~ Chem.~ Soc. Faraday II 73 (1977) 630--648.
@@ -169,16 +164,16 @@ T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
   calculations, Nucleic Acids Research 32 (2004) W665--W667.
 
 \bibitem{CooperBarba2015-share1348841}
-C.~D. Cooper, L.~A. Barba, Grid convergence of {PyGBe} with a spherical
-  molecule near spherical surface, Data, figures and plottings script on
+C.~D. Cooper, L.~A. Barba, Grid convergence of pygbe with a spherical molecule
+  near spherical surface, Data, figures and plottings script on
   \textbf{figshare}, CC-BY license,
-  \href{http://dx.doi.org/10.6084/m9.figshare.1348841}{http://dx.doi.org/10.60%
-84/m9.figshare. 1348841} (March 2015).
+  \href{http://dx.doi.org/10.6084/m9.figshare.1348841}{http://dx.doi.org/10.6084/m9.figshare.
+  1348841} (March 2015).
 
 \bibitem{CooperBarba2015-share1348803}
-C.~D. Cooper, L.~A. Barba, Grid convergence of {PyGBe} with protein {G B1 D4},
+C.~D. Cooper, L.~A. Barba, Grid convergence of pygbe with protein g b1 d4,
   Data, figures and plottings script on \textbf{figshare}, CC-BY license,
-  \href{http://dx.doi.org/10.6084/m9.figshare.1348803}{http://dx.doi.org/10.60%
-84/m9.figshare. 1348803} (March 2015).
+  \href{http://dx.doi.org/10.6084/m9.figshare.1348803}{http://dx.doi.org/10.6084/m9.figshare.
+  1348803} (March 2015).
 
 \end{thebibliography}

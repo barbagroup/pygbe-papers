@@ -3,13 +3,6 @@
 
 \subsection{Discretization}
 
- \begin{figure}[b]
-   \centering
-   \includegraphics[width=0.4\textwidth]{Figure3.pdf} 
-   \caption{Discretization of a molecular surface. $\Gamma_i$ is the panel where the collocation point resides and $\Gamma_j$ the panel being integrated.}
-   \label{fig:molecule_disc}
-\end{figure}
-
 To numerically solve the system in \eqref{eq:integral_eq}, we discretize the boundaries into flat triangular panels and assume that $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ are constant within those panels. The discretized form of the integral operators is as follows:
 %
 \begin{align} \label{eq:layers_disc}
@@ -17,7 +10,7 @@ To numerically solve the system in \eqref{eq:integral_eq}, we discretize the bou
 &V_{L,\text{disc}}^{\mathbf{r}_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) = \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j,
 \end{align}
 
-\noindent where $N_p$ is the number of discretization elements on $\Gamma$, and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j})$ are the constant values of $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$ (we are somewhat abusing the nomenclature here by reusing the symbol $\Gamma$, which previously referred to the complete surface). By collocating $\mathbf{r}_i$ on the center of each panel, we get a linear system of equations which looks just like those in Equations \eqref{eq:matrix_phi} and  \eqref{eq:matrix_dphi}, but its elements are sub-matrices of size $N_p \times N_p$ rather than integral operators. Looking at Figure \ref{fig:molecule_disc}, each element of a sub-matrix is an integral over one panel $\Gamma_j$, with $\mathbf{r}_i$ located at the center of the collocation panel $\Gamma_i$, as follows:
+\noindent where $N_p$ is the number of discretization elements on $\Gamma$, and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j})$ are the constant values of $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$ (we are somewhat abusing the nomenclature here by reusing the symbol $\Gamma$, which previously referred to the complete surface). By collocating $\mathbf{r}_i$ on the center of each panel, we get a linear system of equations which looks just like those in Equations \eqref{eq:matrix_phi} and  \eqref{eq:matrix_dphi}, but its elements are sub-matrices of size $N_p \times N_p$ rather than integral operators. Each element of a sub-matrix is an integral over one panel $\Gamma_j$, with $\mathbf{r}_i$ located at the center of the collocation panel $\Gamma_i$, as follows:
 
 \begin{align} \label{eq:layers_element}
 K_{L,ij} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j, \nonumber \\

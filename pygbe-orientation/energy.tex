@@ -1,6 +1,10 @@
 %!TEX root = CooperBarba2014.tex
 
-Figure \ref{fig:molecule_surface} shows an arrangement with three types of free energy: Coulombic energy from the point charges, surface energy due to $\Gamma_2$ and solvation energy. 
+We can decompose the total free energy into Coulombic, surface, and solvation energy:
+
+\begin{equation}
+F_\text{Total} = F_\text{Coulomb} + F_\text{surf} + F_\text{solv}.
+\end{equation}
 
 \medskip
 
@@ -29,8 +33,10 @@ F_{\text{solv}} &= \frac{1}{2} \int_{\Omega} \rho \,(\phi_{\text{total}} - \phi_
 
 \paragraph*{Surface free energy---}
 
-We use the derivation of free energy of a surface with prescribed charge from Chan and co-workers \cite{ChanMitchell1983,CarnieChan1993}. They describe the free energy on a surface as
+We use the derivation of free energy of a surface with prescribed charge (like $\Gamma_2$ in Figure \ref{fig:molecule_surface}) from Chan and co-workers \cite{ChanMitchell1983,CarnieChan1993}. They describe the free energy on a surface as
 
 \begin{equation} \label{eq:energy_surf}
-F = \frac{1}{2} \int_{\Gamma} G_c \sigma_0^2 d\Gamma 
+F_\text{surf} = \frac{1}{2} \int_{\Gamma} G_c \sigma_0^2 d\Gamma, 
 \end{equation} 
+
+\noindent where $\phi = G_c \sigma_0$.

@@ -1,6 +1,10 @@
 %!TEX root = CooperBarba2014.tex
 
-To obtain the following results, we extended the \pygbe code to consider surfaces with prescribed charge or potential. For most runs, we used a workstation with Intel Xeon X5650 \cpu s  and one \nvidia Tesla C2075 \gpu\ card (2011 Fermi). That includes the code verification runs using the analytical solution and the calculations with protein G B1 D4$^\prime$. The final case considers the antibody immunoglobulin G, which is a much larger molecule than protein G. For these runs, we used Boston University's \textsc{bungee} cluster, which has 16 nodes with 8 Intel Xeon \cpu\ cores each, and a total of 3 \nvidia Tesla Kepler K20 and 26 \nvidia Tesla M2070/2075 \gpu s. All runs were serial: single-\cpu\ and single-\gpu. We used the free \msms software\cite{SannerOlsonSpehner1995} to generate meshes, and \texttt{pdb2pqr}\cite{Dolinsky04} with an \amber forcefield to determine the charges and van der Waals radii. In these tests, we did not consider a Stern layer for either the protein or the charged surface, nor the presence of solvent-filled cavities inside the protein.
+The results detailed in this section were obtained using an extension of the open source code \pygbe,\footnote{\url{https://github.com/barbagroup/pygbe}} that accounts for the presence of surfaces with imposed charge or potential.\cite{CooperBarba2015a}
+We performed the calculations for protein G B1 D4$^\prime$ on a workstation with Intel Xeon X5650 \cpu s  and one \nvidia Tesla C2075 \gpu\ card. 
+The final case considers the antibody immunoglobulin G, which is a much larger molecule than protein G. For these runs, we used Boston University's \textsc{bungee} cluster, which has 16 nodes with 8 Intel Xeon \cpu\ cores each, and a total of 3 \nvidia Tesla Kepler K20 and 26 \nvidia Tesla M2070/2075 \gpu s. All runs were serial: single-\cpu\ and single-\gpu. 
+We obtained the van der Waals radii and charge distribution using \texttt{pdb2pqr}\cite{Dolinsky04} with an \amber forcefield, and generated the meshes using the free \msms software.\cite{SannerOlsonSpehner1995}
+In these tests, we did not consider a Stern layer for either the protein or the charged surface, nor the presence of solvent-filled cavities inside the protein.
 
 \subsection{First case: protein G B1 D4$^{\prime}$} \label{sec:PGB}
 
