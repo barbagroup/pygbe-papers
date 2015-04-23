@@ -1,7 +1,7 @@
 %!TEX root = CooperBarba2014.tex
 
 
-We apply Green's second identity to the system of partial-differential equations in \eqref{eq:pde}, and evaluate the resulting equation on $\Gamma_1$ and $\Gamma_2$ to obtain the following system of integral equations:
+We apply Green's second identity to the system of partial-differential equations in \eqref{eq:pde}, and evaluate the resulting equations on $\Gamma_1$ and $\Gamma_2$ to obtain the following system of integral equations:
 %
 \begin{widetext}
 \begin{align} \label{eq:integral_eq}
@@ -15,7 +15,7 @@ K_{Y}^{\Gamma_2}(\phi_{2,\Gamma_2}) +  V_{Y}^{\Gamma_2} \left( -\frac{\sigma_0}{
 \end{widetext}
 
 
-\noindent where $\phi_{i,\Gamma_j} = \phi_i(\mathbf{r}_{\Gamma_j})$ is the electrostatic potential in $\Omega_i$, evaluated at the surface $\Gamma_j$. 
+\noindent The function $\phi_{i,\Gamma_j} = \phi_i(\mathbf{r}_{\Gamma_j})$ is the electrostatic potential at a point that approaches the surface $\Gamma_j$ from the region $\Omega_i$, and
 $K$ and $V$ are known as the single- and double-layer potentials, correspondingly:
 %
 \begin{align} \label{eq:layers}
@@ -49,6 +49,7 @@ Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as f
     \right].
  \end{align}
 
-The boundary-integral formulation is not limited to represent the protein with a single surface, but can account for solvent-filled cavities inside the protein region and Stern layers,\cite{CooperBardhanBarba2013} where more surfaces are required for an appropriate model. This implementation follows the guidelines from Altman and co-workers to deal with multiple surfaces.
+The boundary-integral formulation is not limited to represent the protein with a single surface, but can account for solvent-filled cavities inside the protein region and Stern layers.\cite{CooperBardhanBarba2013} In those cases, more than one surface is required to appropriately represent the protein. 
+This implementation follows the guidelines from Altman and co-workers to deal with multiple surfaces.
 
 The boundary-integral formulation of the implicit-solvent model is a popular alternative to compute solvation energies of proteins,\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} but little work includes the effect of charged surfaces. Moreover, the efforts that do include them\cite{YoonLenhoff1992} are limited to plane, infinite-sized surfaces. 
