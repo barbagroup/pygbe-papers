@@ -1,9 +1,8 @@
 %!TEX root = CooperBarba2014.tex
 
 
-
-We express the system of partial-differential equations in  \eqref{eq:pde} by the corresponding integral equations along the interface and the nanosurface, $\Gamma_1$ and $\Gamma_2$, which gives
-
+We apply Green's second identity to the system of partial-differential equations in \eqref{eq:pde}, and evaluate the resulting equation on $\Gamma_1$ and $\Gamma_2$ to obtain the following system of integral equations:
+%
 \begin{widetext}
 \begin{align} \label{eq:integral_eq}
 \frac{\phi_{1,\Gamma_1}}{2}+ K_{L}^{\Gamma_1}(\phi_{1,\Gamma_1}) -  V_{L}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1,\Gamma_1} \right)  =  
@@ -16,15 +15,16 @@ K_{Y}^{\Gamma_2}(\phi_{2,\Gamma_2}) +  V_{Y}^{\Gamma_2} \left( -\frac{\sigma_0}{
 \end{widetext}
 
 
-\noindent where $\phi_{i,\Gamma_j} = \phi_i(\mathbf{r}_{\Gamma_j})$ is the potential in region $\Omega_i$ evaluated at the surface $\Gamma_j$. $K$ and $V$ are defined as
-
+\noindent where $\phi_{i,\Gamma_j} = \phi_i(\mathbf{r}_{\Gamma_j})$ is the electrostatic potential in $\Omega_i$, evaluated at the surface $\Gamma_j$. 
+$K$ and $V$ are known as the single- and double-layer potentials, correspondingly:
 %
 \begin{align} \label{eq:layers}
 K_{L/Y}^{\Gamma_k}(\phi_{i,\Gamma_j}) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_{L/Y}(\mathbf{r}_{\Gamma_k},\mathbf{r}_{\Gamma_j}) \right]\phi_{i,\Gamma_j} \, \mathrm{d} \Gamma, \nonumber \\
-V_{L/Y}^{\Gamma_k} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} \right) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} G_{L/Y}(\mathbf{r}_{\Gamma_k},\mathbf{r}_{\Gamma_j})  \, \mathrm{d} \Gamma,
+V_{L/Y}^{\Gamma_k} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} \right) &= \oint_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j} G_{L/Y}(\mathbf{r}_{\Gamma_k},\mathbf{r}_{\Gamma_j})  \, \mathrm{d} \Gamma.
 \end{align}
 
-\noindent corresponding to the double- and single-layer potentials of $\phi_{i,\Gamma_j}$ and $\frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j}$ evaluated at a point on the surface $\Gamma_k$. The functions $G_L$ and $G_Y$ are the free-space Green's functions of the Poisson (Laplace kernel) and linearized Poisson-Boltzmann (Yukawa kernel) equations, respectively. Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
+\noindent In Equation \eqref{eq:layers}, $G_L$ and $G_Y$ are the free-space Green's functions of the Poisson and linearized Poisson-Boltzmann equations, respectively. 
+Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
 %
  \begin{align} \label{eq:matrix_dphi}
  \left[
