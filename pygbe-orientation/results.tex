@@ -8,66 +8,18 @@ In these tests, we did not consider a Stern layer for either the protein or the 
 
 \subsection{First case: protein G B1 D4$^{\prime}$} \label{sec:PGB}
 
-We investigated the preferred orientation of protein G B1 D4$^\prime$ placed 2\AA away from a 100\AA$\times$100\AA$\times$10\AA\ block with surface charge density $\pm$0.05C/m$^2$, centered with respect to a 100\AA$\times$100\AA face.
+We investigated the preferred orientation of protein G B1 D4$^\prime$ placed 2\AA\ away from a 100\AA$\times$100\AA$\times$10\AA\ block with surface charge density $\pm$0.05C/m$^2$, centered with respect to a 100\AA$\times$100\AA\ face.
 As seen in Figure \ref{fig:1pgb_orientation}, $\alpha_\text{tilt}$ is the angle between the protein's dipole moment and the normal vector to the surface, and $\alpha_\text{rot}$ rotates about the dipole moment. 
 When the dipole-moment vector and the normal are aligned ($\alpha_\text{rot}=0$), we define a vector $\mathbf{V}_\text{ref}$ as the shortest distance between the axis normal to the surface that goes through the center of mass, and the atom that is furthest away from it. 
 We use $\mathbf{V}_\text{ref}$ as a reference to define the rotation angle $\alpha_\text{rot}$: the angle between $\mathbf{V}_\text{ref}$ and the vector normal to a 100\AA$\times$10\AA\ face.  
 
 In these cases, we considered a solvent with no salt, i.e., $\kappa=0$ (to compare with other published results), and with relative permittivity 80. The region inside the protein had a relative permittivity of 4.
 
-\medskip
-
- \paragraph*{Grid-convergence study for protein G B1 D4$^{\prime}$---}
-
-By means of a grid-convergence study, we make sure that the runs are in the asymptotic range of the model, select a triangle density so that the geometry is well-resolved by the surface mesh, and find adequate values of the simulation parameters for sampling the orientations. Using Richardson extrapolation, we find values of the energy that estimate the exact solution and use them as a reference to calculate estimated errors. This error is simply the relative difference between the energy obtained numerically with each mesh density and the estimated exact value. In this way, we choose the parameters for the sampling runs with confidence that they are both accurate and efficient in computing time. 
-
-We computed the solvation and surface energy of a system containing a surface with charge density 0.05C/m$^2$, and a protein at $\alpha_{\text{tilt}} = 10^{\circ}$ and $\alpha_{\text{rot}} = 200^{\circ}$. The numerical parameters are presented in Table \ref{table:params2}. Using runs with mesh densities of 2, 4, and 8 elements per square Angstrom, we obtained the values in Table \ref{table:extraPGB} using Richardson extrapolation: these are the reference values for the error plotted in Figure \ref{fig:convergence_1PGB_sensor}. The observed order of convergence was 0.96 for the solvation energy and 0.94 for the surface energy. For details on the Richardson-extrapolation method for performing grid-convergence analysis, see our previous work.\cite{CooperBardhanBarba2013} 
-Figure \ref{fig:convergence_1PGB_sensor} shows errors that are decaying as $1/N$ in both the solvation and surface energies for the finest three meshes. This indicates that the calculations are in the asymptotic region and the geometry is well resolved in these cases.
-
-\begin{table}[h]
-  %\centering
-   %\fontfamily{ppl}\selectfont
-   \caption{\label{table:params2}Numerical parameters used in the convergence runs with protein G B1 D4$^{\prime}$. } 
-    \begin{tabular}{c c c c c c c}
-	\hline%\toprule
-	\multicolumn{3}{l} {\# Gauss points:} & \multicolumn{3}{l}{Treecode:} & \gmres:\\
-	\footnotesize{in-element} & \footnotesize{close-by} & \footnotesize{far-away} & $N_{\text{crit}}$ & $P$ &  $\theta$  & tol.\\
-	\hline%\midrule
-	9 per side & 19 & 7  &  500 & 15 & 0.5  & $10^{-8}$\\	
-	\hline%\bottomrule
-    \end{tabular}
-\end{table}
 
 
+We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 2^\circ$ of tilt angle and $\Delta \alpha_{\text{rot}} =10^\circ$ of rotation angle, resulting in $3,240$ independent runs.  The surface mesh had 4 triangles per square Angstrom on the protein geometry and 2 triangles per square Angstrom on the charged surface. 
 
-\begin{table}[h]
-  %\centering
-   %\fontfamily{ppl}\selectfont
-   \caption{\label{table:extraPGB}Extrapolated values of energy for protein G B1 D4$^\prime$.} 
-    \begin{tabular}{c c}
-	\hline%\toprule
-	\multicolumn{2}{c} {Energy [kcal/mol]} \\
-	Solvation & Surface \\
-	\hline%\midrule
-	$-222.43$ & $317.98$ \\	
-	\hline%\bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.45\textwidth]{Figure10.pdf} 
-   \caption{Grid-convergence study of the solvation and surface energy for protein G B1 D4$^{\prime}$ mutant, interacting with a surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby.\cite{CooperBarba2015-share1348803}}
-   \label{fig:convergence_1PGB_sensor}
-\end{figure}
-
-
-
-\medskip
-
- \paragraph*{Probing orientation of Protein G B1 D4$^{\prime}$---}
-
-We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 2^\circ$ of tilt angle and $\Delta \alpha_{\text{rot}} =10^\circ$ of rotation angle, resulting in $3,240$ independent runs.  The surface mesh had 4 triangles per square Angstrom on the protein geometry and 2 triangles per square Angstrom on the charged surface. Numerical parameters are presented in Table \ref{table:params3}.
+Numerical parameters are presented in Table \ref{table:params3}. In a companion publication,\cite{CooperBarba2015a} we showed convergence plots of protein G B1 D4$^\prime$,\cite{CooperBarba2015-share1348803} and computed an approximated exact value of -222.43[kcal/mol] in solvation energy and 317.98[kcal/mol] in surface energy using Richardson extrapolation with very fine parameters. We are comfortable with the parameters in Table \ref{table:params3} and a mesh density of $4$ elements per square Angstrom on the protein and $2$ elements per square Angstrom on the surface, because results are less than 2\% away from the approximated exact values.\cite{CooperBarba2015a}
 
 \begin{table}[h]
   %\centering
@@ -82,8 +34,6 @@ We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 2^\circ$ o
 	\hline%\bottomrule
     \end{tabular}
 \end{table}
-
- 
 
 With total free energy as the input, the integrals of Equation \eqref{eq:prob_angle} can be computed by means of the trapezoidal rule. Figure \ref{fig:1PGB_probability} presents the probability of the protein orientation in terms of $\cos(\alpha_{\text{tilt}})$, in intervals of $\Delta \cos(\alpha_{\text{tilt}}) = 0.005$ (Fig.~\ref{fig:1PGB_cos}) and $\Delta \alpha_{\text{tilt}}$=2$^{\circ}$ (Fig.~\ref{fig:1PGB_alpha}. Table \ref{table:avg} presents the average orientation $<\cos(\alpha_{\text{tilt}})>$ for the surface having either positive or negative charge density, and Figure \ref{fig:field} shows the electrostatic potential for the preferred orientation in each case. 
 
