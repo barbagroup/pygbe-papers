@@ -48,11 +48,12 @@ Here, $i_m$ is the modified spherical Bessel function of the first kind; $B_{nm}
 B_{nm} = \sum_{\nu=0}^{\infty} A_{nm}^{\nu} k_{n+m-2\nu}(\kappa R),
 \end{equation}
 
-\noindent where $R$ is the center-to-center distance; and $A_{nm}^{\nu}$ is given by the following expression, with ${\bf \Gamma}$ (in this context only) representing the gamma function:
+\noindent where $R$ is the center-to-center distance; and $A_{nm}^{\nu}$ is given by the following expression, with ${\bf \Gamma}_x={\bf \Gamma}(x)$ (in this context only) representing the gamma function:
 
 %\begin{widetext}
 \begin{equation} \label{eq:Anm}
-A_{nm}^{\nu} = \frac{{\bf \Gamma}(n-\nu+0.5){\bf \Gamma}(m-\nu+0.5){\bf \Gamma}(\nu+0.5)(n+m-\nu)!(n+m-2\nu+0.5)}{\pi {\bf \Gamma}(m+n-\nu+1.5)(n-\nu)!(m-\nu)!\nu!}.
+%A_{nm}^{\nu} = \frac{{\bf \Gamma}(n-\nu+0.5){\bf \Gamma}(m-\nu+0.5){\bf \Gamma}(\nu+0.5)(n+m-\nu)!(n+m-2\nu+0.5)}{\pi {\bf \Gamma}(m+n-\nu+1.5)(n-\nu)!(m-\nu)!\nu!}.
+A_{nm}^{\nu} = \frac{{\bf \Gamma}_{n-\nu+0.5}{\bf \Gamma}_{m-\nu+0.5}{\bf \Gamma}_{\nu+0.5}(n+m-\nu)!(n+m-2\nu+0.5)}{\pi {\bf \Gamma}_{m+n-\nu+1.5}(n-\nu)!(m-\nu)!\nu!}.
 \end{equation}
 %\end{widetext}
 
