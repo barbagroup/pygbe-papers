@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{40}%
+\begin{thebibliography}{41}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -155,6 +155,15 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo
   {volume} {29}},\ \bibinfo {pages} {11366--11374} (\bibinfo {year}
   {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
+  {Barba}(2015{\natexlab{a}})}]{CooperBarba2015a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
+  {Barba}},\ }\href@noop {} {\enquote {\bibinfo {title} {{Poisson-Boltzmann}
+  model for protein-surface interactions using the {PyGBe} code and
+  grid-convergence study},}\ } (\bibinfo {year} {2015}{\natexlab{a}}),\
+  \bibinfo {note} {preprint on arXiv, number pending.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Yao}\ and\ \citenamefont
   {Lenhoff}(2004)}]{YaoLenhoff2004}%
   \BibitemOpen
@@ -466,7 +475,7 @@
   (\bibinfo {organization} {ACM},\ \bibinfo {year} {1995})\ pp.\ \bibinfo
   {pages} {406--407}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
-  {Barba}(2015{\natexlab{a}})}]{CooperBarba2015-share1348803}%
+  {Barba}(2015{\natexlab{b}})}]{CooperBarba2015-share1348803}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
   {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
@@ -474,9 +483,9 @@
   {PyGBe} with protein {G B1 D4}},}\ }\bibinfo {howpublished} {Data, figures
   and plottings script on \textbf{figshare}, CC-BY license,
   \href{http://dx.doi.org/10.6084/m9.figshare.1348803}{http://dx.doi.org/10.6084/m9.figshare.
-  1348803}} (\bibinfo {year} {2015}{\natexlab{a}})\BibitemShut {NoStop}%
+  1348803}} (\bibinfo {year} {2015}{\natexlab{b}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
-  {Barba}(2015{\natexlab{b}})}]{CooperBarba2015-share1348804}%
+  {Barba}(2015{\natexlab{c}})}]{CooperBarba2015-share1348804}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
   {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
@@ -485,9 +494,9 @@
   {howpublished} {Data, figures and plottings script on \textbf{figshare},
   CC-BY license,
   \href{http://dx.doi.org/10.6084/m9.figshare.1348804}{http://dx.doi.org/10.6084/m9.figshare.
-  1348804}} (\bibinfo {year} {2015}{\natexlab{b}})\BibitemShut {NoStop}%
+  1348804}} (\bibinfo {year} {2015}{\natexlab{c}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
-  {Barba}(2015{\natexlab{c}})}]{CooperBarba2015-share1348801}%
+  {Barba}(2015{\natexlab{d}})}]{CooperBarba2015-share1348801}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
   {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
@@ -496,7 +505,7 @@
   {howpublished} {Data, figures and plottings script on \textbf{figshare},
   CC-BY license,
   \href{http://dx.doi.org/10.6084/m9.figshare.1348801}{http://dx.doi.org/10.6084/m9.figshare.
-  1348801}} (\bibinfo {year} {2015}{\natexlab{c}})\BibitemShut {NoStop}%
+  1348801}} (\bibinfo {year} {2015}{\natexlab{d}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2003)\citenamefont {Chen},
   \citenamefont {Liu}, \citenamefont {Zhou},\ and\ \citenamefont
   {Jiang}}]{ChenLiuZhouJiang2003}%
