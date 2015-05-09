@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{41}%
+\begin{thebibliography}{40}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -155,6 +155,17 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo
   {volume} {29}},\ \bibinfo {pages} {11366--11374} (\bibinfo {year}
   {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhou}, \citenamefont {Chen},\ and\ \citenamefont
+  {Jiang}(2003)}]{ZhouChenJiang2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Zhou}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chen}}, \ and\
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Jiang}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Orientation of adsorbed antibodies on
+  charged surfaces by computer simulation based on a united-residue model},}\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\
+  }\textbf {\bibinfo {volume} {19}},\ \bibinfo {pages} {3472--3478} (\bibinfo
+  {year} {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
   {Barba}(2015{\natexlab{a}})}]{CooperBarba2015a}%
   \BibitemOpen
@@ -242,17 +253,6 @@
   {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo
   {volume} {27}},\ \bibinfo {pages} {3561--3568} (\bibinfo {year}
   {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zhou}, \citenamefont {Chen},\ and\ \citenamefont
-  {Jiang}(2003)}]{ZhouChenJiang2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Zhou}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chen}}, \ and\
-  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Jiang}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Orientation of adsorbed antibodies on
-  charged surfaces by computer simulation based on a united-residue model},}\
-  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\
-  }\textbf {\bibinfo {volume} {19}},\ \bibinfo {pages} {3472--3478} (\bibinfo
-  {year} {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Biesheuvel}, \citenamefont {van~der Veen},\ and\
   \citenamefont {Norde}(2005)}]{BiesheuvelvanderVeenNord2005}%
   \BibitemOpen
@@ -438,18 +438,15 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Guex}}\ and\ \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
   {Peitsch}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{SWISS-MODEL}
-  and the {S}wiss-{P}db{V}iewer: An envoronment for comparative protein
+  and the {S}wiss-{P}db{V}iewer: An environment for comparative protein
   modeling},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Electrophoresis}\ }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages}
-  {2714--2723} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+  {2714--2723} (\bibinfo {year} {1997})},\ \bibinfo {note}
+  {\url{http://www.expasy.org/spdbv/}}\BibitemShut {NoStop}%
 \bibitem [{Note1()}]{Note1}%
   \BibitemOpen
   \bibinfo {note} {\protect \url {http://www.expasy.org/spdbv/}}\BibitemShut
   {NoStop}%
-\bibitem [{Note2()}]{Note2}%
-  \BibitemOpen
-  \bibinfo {note} {\protect \url
-  {https://github.com/barbagroup/pygbe}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Dolinsky}\ \emph {et~al.}(2004)\citenamefont
   {Dolinsky}, \citenamefont {Nielsen}, \citenamefont {{McCammon}},\ and\
   \citenamefont {Baker}}]{Dolinsky04}%
