@@ -17,12 +17,12 @@ In these cases, we considered a solvent with no salt, i.e., $\kappa=0$ (to compa
 
 We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 2^\circ$ of tilt angle and $\Delta \alpha_{\text{rot}} =10^\circ$ of rotation angle, resulting in $3,240$ independent runs.  The surface mesh had 4 triangles per square Angstrom on the protein geometry and 2 triangles per square Angstrom on the charged surface. 
 
-Numerical parameters are presented in Table \ref{table:params3}. In a companion publication,\cite{CooperBarba2015a} we presented a grid-convergence study of our code using both an analytical solution and a case with protein \gb,\cite{CooperBarba2015-share1348803}, and we computed an approximated exact value of $-222.43$[kcal/mol] for solvation energy and $317.98$[kcal/mol] in surface energy using Richardson extrapolation with very fine parameters. We are comfortable with the parameters in Table \ref{table:params3} and mesh densities of $4$ elements per square Angstrom on the protein and $2$ elements per square Angstrom on the surface, because results are less than 2\% away from the approximated exact values.\cite{CooperBarba2015a}
+Numerical parameters are presented in Table \ref{table:params3}. In a companion publication,\cite{CooperBarba2015a} we present a grid-convergence study using both an analytical solution and a case with protein \gb.\cite{CooperBarba2015-share1348803} We computed an approximate exact value of $-222.43$[kcal/mol] for solvation energy and $317.98$[kcal/mol] for surface energy using Richardson extrapolation with very fine parameters. With results that are less than 2\% away from the approximate exact values, we are comfortable with the parameters in Table \ref{table:params3} and mesh densities of $4$ elements per square Angstrom on the protein and $2$ elements per square Angstrom on the surface.\cite{CooperBarba2015a}
 
 \begin{table}[h]
   %\centering
    %\fontfamily{ppl}\selectfont
-   \caption{\label{table:params3}Numerical parameters used in the runs probing orientation of protein \gb. } 
+   \caption{\label{table:params3}Numerical parameters used for numerically probing the orientation of protein \gb. } 
     \begin{tabular}{c c c c c c c}
 	\hline%\toprule
 	\multicolumn{3}{l} {\# Gauss points:} & \multicolumn{3}{l}{Treecode:} & \gmres:\\
@@ -33,7 +33,7 @@ Numerical parameters are presented in Table \ref{table:params3}. In a companion 
     \end{tabular}
 \end{table}
 
-With total free energy as the input, the integrals of Equation \eqref{eq:prob_angle} can be computed by means of the trapezoidal rule. Figure \ref{fig:1PGB_probability} presents the probability of the protein orientation in terms of $\cos(\alpha_{\text{tilt}})$, in intervals of $\Delta \cos(\alpha_{\text{tilt}}) = 0.005$ (Fig.~\ref{fig:1PGB_cos}) and $\Delta \alpha_{\text{tilt}}$=2$^{\circ}$ (Fig.~\ref{fig:1PGB_alpha}). Table \ref{table:avg} presents the average orientation $<\cos(\alpha_{\text{tilt}})>$ for the surface having either positive or negative charge density, and Figure \ref{fig:field} shows the electrostatic potential for the preferred orientation in each case. 
+Using total free energy as the input, the integrals of Equation \eqref{eq:prob_angle} can be computed by means of the trapezoidal rule. Figure \ref{fig:1PGB_probability} presents the probability of the protein orientation in terms of $\cos(\alpha_{\text{tilt}})$, in intervals of $\Delta \cos(\alpha_{\text{tilt}}) = 0.005$ (Fig.~\ref{fig:1PGB_cos}) and $\Delta \alpha_{\text{tilt}}$=2$^{\circ}$ (Fig.~\ref{fig:1PGB_alpha}). Table \ref{table:avg} presents the average orientation $<\cos(\alpha_{\text{tilt}})>$ for the surface having either positive or negative charge density, and Figure \ref{fig:field} shows the electrostatic potential for the preferred orientation in each case. 
 
 \begin{figure*}
    \centering
@@ -41,7 +41,7 @@ With total free energy as the input, the integrals of Equation \eqref{eq:prob_an
    \subfloat[]{\includegraphics[width=0.43\textwidth]{Figure11b.pdf} \label{fig:1PGB_alpha}}\\
    \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure11c.pdf} \label{fig:1PGB_2D_sig005}}
    \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure11d.pdf} \label{fig:1PGB_2D_sig-005}}
-   \caption{Orientation probability distribution of protein \gb. Figures \ref{fig:1PGB_cos} and \ref{fig:1PGB_alpha} are the probability with respect to the tilt angle and its cosine, respectively. Figures \ref{fig:1PGB_2D_sig005} and \ref{fig:1PGB_2D_sig-005} are the probability with respect to both the tilt and rotation angle. Data sets, figure files and running/plotting scripts available under \ccby.\cite{CooperBarba2015-share1348804}}
+   \caption{Orientation probability distribution of protein \gb. Figures \ref{fig:1PGB_cos} and \ref{fig:1PGB_alpha} are the probability with respect to the tilt angle and its cosine, respectively. Figures \ref{fig:1PGB_2D_sig005} and \ref{fig:1PGB_2D_sig-005} are the probability distributions with respect to both the tilt and rotation angles. Data sets, figure files and running/plotting scripts are available under \ccby.\cite{CooperBarba2015-share1348804}}
    \label{fig:1PGB_probability}
 \end{figure*}
 
@@ -76,14 +76,14 @@ We computed the electrostatic field of immunoglobulin G---a protein widely used 
 
  \paragraph*{Grid-convergence study for immunoglobulin G---}
 
-Since this was the first time we performed calculations on immunoglobulin G, we carried out a grid-convergence study to make sure the geometry was well resolved and to find adequate values of the simulation parameters for sampling different orientations. The error in Figure \ref{fig:1IGT_convergence} is the relative difference between the energy obtained using \pygbe with each mesh density and the estimated exact value computed with Richardson extrapolation.
+Since this was the first time we performed calculations on immunoglobulin G, we carried out a grid-convergence study to make sure the geometry was well resolved and to find adequate values of the simulation parameters for sampling different orientations. The error plotted in Figure \ref{fig:1IGT_convergence} is the relative difference between the energy obtained using \pygbe with each mesh density and the estimated exact value computed with Richardson extrapolation.
 
 In this case, we computed the solvation energy and surface energy of a system consisting of a surface with charge density 0.05C/m$^2$ and a protein with $\alpha_{\text{tilt}} = 31^{\circ}$ and $\alpha_{\text{rot}} = 130^{\circ}$. Using the results from runs with a mesh density of 2, 4, and 8 elements per square Angstrom, we added the solvation and surface energies, and used Richardson extrapolation to obtain a value of $-2792.22$[kcal/mol], and an \emph{observed order of convergence} of 0.85. This is our reference to calculate the errors in Figure \ref{fig:1IGT_convergence}. There is a slight deviation from the expected value of the observed order of convergence (1.0), which we attribute to the non-uniform mesh generated by \msms. Even though the mesh density is on average doubled for each run, there is no guarantee that the refinement is homogeneous throughout the whole molecular surface. The numerical parameters are presented in Table \ref{table:params4}.
 
 \begin{table}[h]
   %\centering
    %\fontfamily{ppl}\selectfont
-   \caption{\label{table:params4}Numerical parameters used in the convergence runs with immunoglobulin G. } 
+   \caption{\label{table:params4}Numerical parameters used in the grid-convergence study with immunoglobulin G. } 
     \begin{tabular}{c c c c c c c}
 	\hline%\toprule
 	\multicolumn{3}{l} {\# Gauss points:} & \multicolumn{3}{l}{Treecode:} & \gmres:\\
@@ -100,7 +100,7 @@ In this case, we computed the solvation energy and surface energy of a system co
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{Figure13.pdf} 
-   \caption{Grid-convergence study of the solvation plus surface energy for immunoglobulin G interacting with a surface with charge density 0.05C/m$^2$. Data sets, figure files and plotting scripts available under \ccby.\cite{CooperBarba2015-share1348801}}
+   \caption{Grid-convergence study of the solvation plus surface energy for immunoglobulin G interacting with a surface with charge density of 0.05C/m$^2$. Data sets, figure files and plotting scripts are available under \ccby.\cite{CooperBarba2015-share1348801}}
    \label{fig:1IGT_convergence}
 \end{figure}
 
