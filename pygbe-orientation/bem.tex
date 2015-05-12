@@ -1,4 +1,4 @@
-%!TEX root = CooperBarba2014.tex
+%!TEX root = CooperBarba-orientation.tex
 
 
 We apply Green's second identity to the system of partial-differential equations in \eqref{eq:pde}, and evaluate the resulting equations on $\Gamma_1$ and $\Gamma_2$ to obtain the following system of integral equations:
@@ -52,4 +52,4 @@ Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as f
 The boundary-integral formulation is not limited to represent the protein with a single surface, but can account for solvent-filled cavities inside the protein region and Stern layers.\cite{CooperBardhanBarba2013} In those cases, more than one surface is required to appropriately represent the protein. 
 This implementation follows the guidelines from Altman and co-workers to deal with multiple surfaces.
 
-The boundary-integral formulation of the implicit-solvent model is a popular alternative to compute solvation energies of proteins,\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} but little work includes the effect of charged surfaces. Moreover, the efforts that do include them\cite{YoonLenhoff1992} are limited to plane, infinite-sized surfaces. 
+The boundary-integral formulation of the implicit-solvent model is a popular alternative to compute solvation energies of proteins,\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} but the effect of charged surfaces has rarely been considered. The only work that we know of that does include these effects is limited to plane, infinite surfaces.\cite{YoonLenhoff1992} 
