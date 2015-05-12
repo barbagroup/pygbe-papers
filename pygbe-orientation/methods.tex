@@ -1,9 +1,8 @@
-
-%!TEX root = CooperBarba2014.tex
+%!TEX root = CooperBarba-orientation.tex
 
 \subsection{Discretization and implementation details}
 
-We solve the system in \eqref{eq:integral_eq} numerically using a boundary element method (\bem). In it, we discretize the \ses in flat triangular panels where the potential $(\phi)$ and its normal derivative $(\partial \phi /\partial \mathbf{n})$ are constant, and then collocate the discretized equation on the center of each panel. This transforms the integral operators in the matrix equation \eqref{eq:matrix_dphi} into block matrices of size $N_p \times N_p$, where $N_p$ is the number of panels. Each entry of the block matrix is an integral over one panel ($\Gamma_j$), evaluated on the center of panel $\Gamma_i$:
+We solve the system in \eqref{eq:integral_eq} numerically using a boundary element method (\bem). To represent the \ses, we use flat triangular panels where the potential $(\phi)$ and its normal derivative $(\partial \phi /\partial \mathbf{n})$ are constant, and then collocate the discretized equation on the center of each panel. This transforms the integral operators in the matrix equation \eqref{eq:matrix_dphi} into block matrices of size $N_p \times N_p$, where $N_p$ is the number of panels. Each entry of the block matrix is an integral over one panel ($\Gamma_j$), evaluated on the center of panel $\Gamma_i$:
 %
 \begin{align} \label{eq:layers_element}
 K_{L,ij} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j, \nonumber \\
@@ -12,7 +11,7 @@ V_{L,ij} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \m
 
 We classify the integrals in Equation \eqref{eq:layers_element} in three groups, depending on the distance $d$ between the panel and the collocation point. 
 When the collocation point is inside the panel being integrated, we get a singular integral which we solve with a semi-analytical approach\cite{ZhuHuangSongWhite2001} that places Gauss nodes on the sides of the triangle. 
-We call near-singular integrals those where $d<2L$ ($L = \sqrt{2\cdot \text{Area}}$). For near-singular integrals we use a high order Gauss quadrature rule with 19 or more nodes. 
-Finally, when the panel and collocation point are further than $2L$, we only need 1, 3, 4 or 7 Gauss nodes per element to get good accuracy.
+We call near-singular integrals those where $d<2L$ ($L = \sqrt{2\cdot \text{Area}}$). For near-singular integrals, we use a high-order Gauss quadrature rule with 19 or more nodes. 
+Finally, when the panel and collocation point are further than $2L$ from each other, we only need 1, 3, 4 or 7 Gauss nodes per element to get good accuracy.
 
-We solve the resulting linear system with a general minimal residual method (\gmres). The most time consuming part of the \gmres is a matrix-vector multiplication (an $O(N^2)$ operation) done every iteration of the solver, which we approximate in $O(N\log N)$ time with a treecode algorithm.\cite{BarnesHut1986} More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}
+To solve the resulting linear system, we use a general minimal residual method (\gmres). The most time consuming part of the \gmres solver is a matrix-vector multiplication---in principle, an $O(N^2)$ operation---done within every iteration of the solver. But by using of a treecode algorithm, we perform this operation in $O(N\log N)$ time.\cite{BarnesHut1986} More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}
