@@ -33,7 +33,7 @@ singlelinecheck=false
 
 \newcommand{\pygbe}{\texttt{PyGBe}\xspace}
 \newcommand{\gb}{{\small G\,B1\,D4$^\prime$}\xspace}
-\newcommand{\ig}{{\small IgG}\xspace}
+\newcommand{\ig}{{\small IgG}}
 \newcommand{\pdb}{{\small PDB}\xspace}
 \newcommand{\gmres}{\textsc{gmres}\xspace}
 \newcommand{\bem}{\textsc{bem}\xspace}
@@ -90,13 +90,14 @@ singlelinecheck=false
 \begin{abstract}
 
 Protein-surface interactions are ubiquitous in biological processes and bioengineering, yet are not fully understood. 
-In the field of biosensors, a key factor in biosensor performance is the orientation of the ligand molecule, that attaches the target molecule to the sensor.
-The aim of this work is to study proteins interacting with a \sam-coated sensor (represented as a charged surface) and obtain orientation data, with an implicit-solvent model. 
-We studied the preferred orientation of protein GB1 D4$^\prime$ and immunoglobulin G near a charged surface using an extension of the implicit-solvent model in the code \pygbe, that includes the effect of charged surfaces.
-Sampling the free energy for protein GB1 at a range of tilt and rotation angles with respect to the charged surface, we calculated the probability of the protein orientation and observed a dipolar behavior. 
-This result is consistent with published molecular-dynamics simulations and experimental studies using this protein. 
-The case of immunoglobulin G is more challenging due to the large size of the molecule, but it is also more relevant to biosensor technology. 
-The probability distribution of orientations for this protein at varying surface charge and salt concentration suggests that it is easier to control the antibody orientation with low salt concentration and high surface charge. The results also show that local interactions dominate over dipole moment for this protein. In view of its capacity to deal with much larger biomolecules than direct simulation, this implicit-solvent model can offer a valuable approach in biosensor studies.
+In biosensors, a key factor determining the sensitivity and thus the performance of the device is the orientation of the ligand molecules on the bioactive device surface. Adsorption studies thus seek to determine how orientation can be influenced by surface preparation, varying surface charge and ambient salt concentration.
+In this work, protein orientation near charged nanosurfaces is obtained under electrostatic effects using the Poisson-Boltzmann equation, in an implicit-solvent model.
+Sampling the free energy for protein \gb at a range of tilt and rotation angles with respect to the charged surface, we calculated the probability of the protein orientations and observed a dipolar behavior. This result is consistent with published experimental studies and combined Monte Carlo and molecular dynamics simulations using this small protein, validating our method. 
+More relevant to biosensor technology, antibodies such as immunoglobulin G are still a formidable challenge to molecular simulation, due to their large size. 
+With the Poisson-Boltzmann model, we obtained the probability distribution of orientations for the iso-type {\small IgG2a} at varying surface charge and salt concentration.
+This iso-type was not found to have a preferred orientation in previous studies, unlike the iso-type {\small IgG1} whose larger dipole moment was assumed to make it easier to control. Our results show a high-probability and favorable orientation for {\small IgG2a} with positive surface charge of 0.2C/m$^{2}$ and 9mM salt concentration. 
+The results also show that local interactions dominate over dipole moment for this protein.
+Improving immunoassay sensitivity may thus be assisted by numerical studies using our method (and open-source code), guiding changes to fabrication protocols or protein engineering of ligand molecules to obtain more favorable orientations. 
 
 \end{abstract}
 
