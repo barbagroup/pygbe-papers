@@ -1,6 +1,6 @@
 %!TEX root = CooperBarba-orientation.tex
 
-The results detailed in this section were obtained using an extension of the open-source code \pygbe,\footnote{\url{https://github.com/barbagroup/pygbe}} accounting for the presence of surfaces with imposed charge or potential.\cite{CooperBarba2015a}
+The results detailed in this section were obtained using an extension of the open-source code \pygbe,\footnote{\href{https://github.com/barbagroup/pygbe}{https://github.com/barbagroup/pygbe}} accounting for the presence of surfaces with imposed charge or potential.\cite{CooperBarba2015a}
 We ran the calculations for protein \gb on a workstation with Intel Xeon X5650 \cpu s  and one \nvidia Tesla C2075 \gpu\ card (late 2011). 
 The final case considers the antibody immunoglobulin G, which is a much larger molecule than protein \gb. For these runs, we used Boston University's \textsc{bungee} cluster, which has 16 nodes with 8 Intel Xeon \cpu\ cores each, and a total of 3 \nvidia Tesla Kepler K20 (late 2012) and 26 \nvidia Tesla M2070/2075 \gpu s. All runs were serial: single-\cpu\ and single-\gpu. 
 We obtained the van der Waals radii and charge distribution using \texttt{pdb2pqr}\cite{Dolinsky04} with an \amber forcefield, and generated the meshes using the free \msms software.\cite{SannerOlsonSpehner1995}
