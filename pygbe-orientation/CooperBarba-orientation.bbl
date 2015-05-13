@@ -445,7 +445,8 @@
   {\url{http://www.expasy.org/spdbv/}}\BibitemShut {NoStop}%
 \bibitem [{Note1()}]{Note1}%
   \BibitemOpen
-  \bibinfo {note} {\protect \url {http://www.expasy.org/spdbv/}}\BibitemShut
+  \bibinfo {note} {\protect \href
+  {https://github.com/barbagroup/pygbe}{https://github.com/barbagroup/pygbe}}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Dolinsky}\ \emph {et~al.}(2004)\citenamefont
   {Dolinsky}, \citenamefont {Nielsen}, \citenamefont {{McCammon}},\ and\
