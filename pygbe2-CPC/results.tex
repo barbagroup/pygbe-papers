@@ -39,7 +39,22 @@ Figure \ref{fig:error_sphere} presents the results of the grid-convergence analy
 
 As seen in Figure \ref{fig:error_sphere}, the error decays with the average area of the boundary elements ($\frac{1}{N}$), which is the expected behavior and consistent with our previous verification exercises \cite{CooperBarba-share154331}. This proves that the extension of \pygbe to treat charged surfaces is solving the mathematical model correctly.
 
-%The interaction free energy involves three separate calculations: one with both bodies (molecule and interacting surface with set potential) and one for each isolated body. The time to solution for each mesh in Figure \ref{fig:time} corresponds to the total time, including all three cases that need to be computed. The most time consuming part of the algorithm is the matrix-vector product within the Krylov solver, which scales as $O(N \log N)$ thanks to the treecode acceleration. However, the total time to solution scales slightly worse than $O(N \log N)$. This happens because the condition number of the system depends on the number of elements and more iterations are required to converge to the specified tolerance, which is revealed by Figure \ref{fig:iterations}.
+Obtaining the interaction free energy involves three separate calculations: one with both bodies (molecule and interacting surface with set potential) and one for each isolated body. Figure \ref{fig:time} shows the total time to solution for each mesh, including all three cases that need to be computed. The most time-consuming part of the algorithm is the matrix-vector product within the Krylov solver, which scales as $O(N \log N)$ thanks to the treecode acceleration. However, the total time-to-solution scales slightly worse than $O(N \log N)$ because the condition number of the system increases with $N$ as shown in Figure \ref{fig:iterations}.
+
+\begin{figure}%[htbp] 
+   \centering
+   \includegraphics[width=0.4\textwidth]{total_time.pdf} 
+   \caption{Total runtime for obtaining interaction free energy (requiring three separate runs: one for each surface in isolation and one for both together), for the two-sphere system of \ref{sec:verification}.}
+   \label{fig:time}
+\end{figure}
+
+\begin{figure}%[htbp] 
+   \centering
+   \includegraphics[width=0.4\textwidth]{iterations.pdf} 
+   \caption{Number of iterations to converge for the two-sphere system of \ref{sec:verification}. Iteration count increases with problem size due to the conditioning properties of the boundary integral formulation in our model.}
+   \label{fig:iterations}
+\end{figure}
+
 
 \subsection{Protein \gb} \label{sec:PGB}
 
@@ -51,7 +66,7 @@ The angle between the dipole moment of the protein and the vector normal to the 
 The dipole-moment vector placed at the center of mass of the protein generates an axis, and we used the line of shortest distance between the outermost atom and this axis as a reference vector $\mathbf{V}_{\text{ref}}$. 
 The rotation angle $\alpha_{\text{rot}}$ is the angle between the normal vector to a 100\AA$\times$10\AA\ side face of the block and $\mathbf{V}_{\text{ref}}$ when $\alpha_\text{tilt}=0$, and is equal to $200^\circ$ in these tests. Figure \ref{fig:protein_surface} is a sketch of this arrangement.
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
+\begin{figure}%[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.35\textwidth]{Figure4.pdf} 
    \caption{Orientation of a protein near a charged surface. $\mathbf{m}$ is the dipole moment vector, $\mathbf{V}_\text{ref}$ the vector between $\mathbf{m}$ and the atom that is the furthest, and $\mathbf{n}_1$ and $\mathbf{n}_2$ are normal to their corresponding surfaces. $\alpha_\text{tilt}$ is the angle between $\mathbf{n}_1$ and $\mathbf{m}$, and $\alpha_\text{rot}$ the angle between $\mathbf{V}_\text{ref}$ and $\mathbf{n}_2$ when $\mathbf{m}$ and $\mathbf{n}_1$ are aligned.}
@@ -97,7 +112,7 @@ For details on the Richardson-extrapolation method for performing grid-convergen
     \end{tabular}
 \end{table}
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
+\begin{figure}%[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{convergence_isolated.pdf} 
    \caption{Grid-convergence study of the solvation energy for an isolated protein \gb mutant, and the surface energy of an isolated surface with charge density of 0.05C/m$^2$.}
