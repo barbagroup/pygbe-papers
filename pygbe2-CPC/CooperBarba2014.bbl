@@ -13,6 +13,16 @@ J.~J. Gray, The interaction of proteins with solid surfaces, Curr.\ Opin.\
 M.~Rabe, D.~Verdes, S.~Seeger, Understanding protein adsorption phenomena at
   solid surfaces, Adv. Colloid Interface Sci. 162 (2011) 87--106.
 
+\bibitem{MijajlovicETal2013}
+M.~Mijajlovic, M.~J. Penna, M.~J. Biggs,
+  \href{http://dx.doi.org/10.1021/la3047966}{Free energy of adsorption for a
+  peptide at a liquid/solid interface via nonequilibrium molecular dynamics},
+  Langmuir 29~(9) (2013) 2919--2926, pMID: 23394469.
+\newblock \href {http://arxiv.org/abs/http://dx.doi.org/10.1021/la3047966}
+  {\path{arXiv:http://dx.doi.org/10.1021/la3047966}}, \href
+  {http://dx.doi.org/10.1021/la3047966} {\path{doi:10.1021/la3047966}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1021/la3047966}
+
 \bibitem{RouxSimonson1999}
 B.~Roux, T.~Simonson, Implicit solvent models, Biophys.\ Chem. 78 (1999) 1--20.
 
