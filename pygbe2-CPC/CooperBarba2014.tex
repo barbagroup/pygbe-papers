@@ -28,6 +28,7 @@ singlelinecheck=false
 }
 
 \newcommand{\pygbe}{\texttt{PyGBe}\xspace}
+\newcommand{\gb}{{\small G\,B1\,D4$^\prime$}\xspace}
 \newcommand{\gmres}{\textsc{gmres}\xspace}
 \newcommand{\bem}{\textsc{bem}\xspace}
 \newcommand{\ses}{\textsc{ses}\xspace}
@@ -154,12 +155,12 @@ biomolecular electrostatics \sep protein surface interaction \sep implicit solve
 \section{Analytical solution} \label{sec:analytical_solution}
 \input{analytical_solution}
 
-\section{Results} \label{sec:results}
+\section{Results of the grid-convergence study} \label{sec:results}
 \input{results}
 
 \subsection{Reproducibility and data management}
-To facilitate the reproduction of our work, we consistently release the code and data associated with every publication. In that context, \pygbe was released under an MIT open-source license with our previous publication \cite{CooperBardhanBarba2013}, through a version-control repository. 
-In this case, we prepared \emph{``reproducibility packages''} containing running and post-processing scripts in Python to generate Figures \ref{fig:error_sphere} and \ref{fig:convergence_1PGB_sensor}. The packages invoke \pygbe with the parameters and meshes reported here, and then produce the plots, all with a single command.
+To facilitate the replication of our work, we consistently release code and data associated with every publication. In that context, \pygbe was released under an MIT open-source license with our previous publication \cite{CooperBardhanBarba2013}, and continues to be available via its version-control repository. 
+Supplementing this paper, we prepared \emph{``reproducibility packages''} containing running and post-processing scripts in Python to generate Figures \ref{fig:error_sphere} and \ref{fig:convergence_1PGB_sensor}. The packages invoke \pygbe with the parameters and meshes reported here, and then produce the plots, all with a single command.
 The reproducibility packages are hosted on \textbf{figshare}, and are referenced in the respective captions.
 
 \section{Discussion} \label{sec:discussion}
