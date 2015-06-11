@@ -122,11 +122,9 @@ W.~H. Geng, R.~Krasny, A treecode-accelerated boundary integral
   {Poisson-Boltzmann} solver for solvated biomolecules, J. Comp.\ Phys. 247
   (2013) 62--78.
 
-\bibitem{ZhuHuangSongWhite2001}
-Z.~Zhu, J.~Huang, B.~Song, J.~White, Improving the robustness of a surface
-  integral formulation for wideband impedance extraction of {3D} structures,
-  in: Proceedings of the 2001 IEEE/ACM Int.\ Conf.\ on Computer-Aided Design,
-  2001, pp. 592--597.
+\bibitem{HessSmith1967}
+J.~L. Hess, A.~Smith, Calculation of potential flow about arbitrary bodies,
+  Progress in Aerospace Sciences 8 (1967) 1--138.
 
 \bibitem{GreengardRokhlin1987}
 L.~Greengard, V.~Rokhlin, A fast algorithm for particle simulations, J.
