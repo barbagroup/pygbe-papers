@@ -5,7 +5,7 @@
 We express the system of partial-differential equations in  \eqref{eq:pde} by the corresponding integral equations along the interface and the nanosurface, $\Gamma_1$ and $\Gamma_2$. Many authors have used the boundary-integral representation of the implicit-solvent model to compute solvation energies of proteins \cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013}, but apart from work led by Lenhoff \cite{YoonLenhoff1992}, we know of no studies that account for interacting surfaces in the system. 
 
 Consider the setting in Figure \ref{fig:molecule_surface} with prescribed potential at $\Gamma_2$. The application of Green's second identity on the first two equations of \eqref{eq:pde} yields:
-
+%
 \begin{align} \label{eq:green_identity}
 \phi_{1}+ K_{L}^{\Omega_1}(\phi_{1,\Gamma_1}) -  V_{L}^{\Omega_1} \left(\frac{\partial}{\partial \mathbf{n}}  \phi_{1,\Gamma_1}  \right) &  = \nonumber\\
  \frac{1}{\epsilon_1} \sum_{k=0}^{N_q}  \frac{q_k}{4\pi|\mathbf{r}_{\Omega_1} - \mathbf{r}_k|} &  \quad \text{on $\Omega_1$,} \nonumber \\ \nonumber \\
@@ -52,7 +52,7 @@ and $\phi_{2,\Gamma_2} = \phi_0$ to get the following system of boundary equatio
 
 
 \noindent Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
-
+%
  \begin{align} \label{eq:matrix_phi}
  \left[
     \begin{matrix} % or pmatrix or bmatrix or Bmatrix or ...
@@ -104,9 +104,10 @@ and $\phi_{2,\Gamma_2} = \phi_0$ to get the following system of boundary equatio
  
 % \medskip
 
-The formulation detailed in this section differs from the work by Lenhoff and co-workers \cite{YoonLenhoff1992,RothLenhoff1993} because they consider an infinite charged surface, modeled using a modified Green's function to account for the half-space domain. Lenhoff's approach has the advantage that the charged surface does not require a mesh, but presents difficulties if the surface has a complex geometry. Moreover, an infinite surface may not be a good model if its size is comparable to the protein's, like it happens with nano-structures.
+The formulation detailed in this section differs from the work by Lenhoff and co-workers \cite{YoonLenhoff1992,RothLenhoff1993} because they consider an infinite charged surface, modeled using a modified Green's function to account for the half-space domain. Lenhoff's approach has the advantage that the charged surface does not require a mesh, but cannot be applied to any situation where the surface has non-planar geometry. An infinite surface may not be a good model if the size of a device is comparable to the protein's, like it happens with nano-structures.
+In that case, one needs to be able to represent the detailed geometry of a device via a surface mesh, and satisfy boundary conditions there, as detailed above.
 
-This formulation can be extended to account for Stern layers and solvent-filled cavities, by adding more surfaces or interfaces. In our code, we deal with multiple surfaces in the manner presented by Altman and co-workers \cite{AltmanBardhanWhiteTidor09}, as described in our previous paper \cite{CooperBardhanBarba2013}.
+The system in \eqref{eq:matrix_dphi} can be extended to account for Stern layers and solvent-filled cavities by adding more surfaces or interfaces. In our code, we deal with multiple surfaces in the manner presented by Altman and co-workers \cite{AltmanBardhanWhiteTidor09}, as described in our previous paper \cite{CooperBardhanBarba2013}.
 
 
 
