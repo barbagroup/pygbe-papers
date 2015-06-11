@@ -3,14 +3,14 @@
 
 \subsection{Discretization}
 
-To numerically solve the system in \eqref{eq:integral_eq}, we discretize the boundaries into flat triangular panels and assume that $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ are constant within those panels. The discretized form of the integral operators is as follows:
+To numerically solve the system in \eqref{eq:matrix_dphi}, we discretize the boundaries into flat triangular panels and assume that $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ are constant within those panels. The discretized form of the integral operators is as follows:
 %
 \begin{align} \label{eq:layers_disc}
-&K_{L,\text{disc}}^{\mathbf{r}_i}(\phi(\mathbf{r}_{\Gamma})) =  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j,  \nonumber \\
+&K_{L,\text{disc}}^{\mathbf{r}_i}\left(\phi(\mathbf{r}_{\Gamma})\right) =  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j,  \nonumber \\
 &V_{L,\text{disc}}^{\mathbf{r}_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) = \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j,
 \end{align}
 
-\noindent where $N_p$ is the number of discretization elements on $\Gamma$, and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j})$ are the constant values of $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$ (we are somewhat abusing the nomenclature here by reusing the symbol $\Gamma$, which previously referred to the complete surface). By collocating $\mathbf{r}_i$ on the center of each panel, we get a linear system of equations which looks just like those in Equations \eqref{eq:matrix_phi} and  \eqref{eq:matrix_dphi}, but its elements are sub-matrices of size $N_p \times N_p$ rather than integral operators. Each element of a sub-matrix is an integral over one panel $\Gamma_j$, with $\mathbf{r}_i$ located at the center of the collocation panel $\Gamma_i$, as follows:
+\noindent where $N_p$ is the number of discretization elements on $\Gamma$, and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j})$ are the constant values of $\phi$ and $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$ (we are somewhat abusing the nomenclature here by reusing the symbol $\Gamma$, which previously referred to the complete surface). By collocating $\mathbf{r}_i$ on the center of each panel, we get a linear system of equations that look just like \eqref{eq:matrix_phi} or \eqref{eq:matrix_dphi}, but the coefficient matrix is formed by sub-matrices of size $N_p \times N_p$ rather than integral operators. Each element of a sub-matrix is an integral over one panel $\Gamma_j$, with $\mathbf{r}_i$ located at the center of the collocation panel $\Gamma_i$, as follows:
 
 \begin{align} \label{eq:layers_element}
 K_{L,ij} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j, \nonumber \\
@@ -27,7 +27,7 @@ The terms on the right-hand side and the unknown vectors in the discretized form
 
 \noindent where $\mathbf{r}_i$ is located at the center of panel $\Gamma_i$.
 
-In our numerical solution, integrals are calculated in three ways, depending on how close the panel is to the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique \cite{ZhuHuangSongWhite2001}, with Gauss points placed along the edges of the element. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot \text{Area}}$--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond a distance of $2L$, elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
+In our numerical solution, integrals are calculated in three possible ways, depending on how close the panel is to the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique \cite[p.~49, ff.]{HessSmith1967}, with Gauss points placed along the edges of the element. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot \text{Area}}$--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond a distance of $2L$, elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
 
 \subsection{Treecode-accelerated boundary element method}
 
