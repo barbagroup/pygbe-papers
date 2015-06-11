@@ -27,7 +27,7 @@ The terms on the right-hand side and the unknown vectors in the discretized form
 
 \noindent where $\mathbf{r}_i$ is located at the center of panel $\Gamma_i$.
 
-In our numerical solution, integrals are calculated in three possible ways, depending on how close the panel is to the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique \cite[p.~49, ff.]{HessSmith1967}, with Gauss points placed along the edges of the element. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot \text{Area}}$--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond a distance of $2L$, elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
+In our numerical solution, integrals are calculated in three possible ways, depending on how close the panel is to the collocation point. When the collocation point is inside the element being integrated, we use a semi-analytical technique, with Gauss points placed along the edges of the element \cite[p.~49, ff.]{HessSmith1967}. If the integrated element is closer than $2L$ from the collocation point ---where $L = \sqrt{2\cdot S_j}$ with $S_j$ the surface area of the source panel--- we use a fine Gauss quadrature rule, with 19 or more points per element. Beyond a distance of $2L$, elements have only 1, 3, 4 or 7 Gauss points, depending on the case.
 
 \subsection{Treecode-accelerated boundary element method}
 
