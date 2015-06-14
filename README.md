@@ -6,6 +6,8 @@
 
 *"Probing protein orientation near charged nanosurfaces for  simulation-assisted biosensor design"*
 
+[arXiv:1503.08150v3](http://arxiv.org/abs/1503.08150v3)
+
 **Abstract:**
 
 Protein-surface interactions are ubiquitous in biological processes and bioengineering, 
@@ -32,6 +34,8 @@ fabrication protocols or protein engineering of ligand molecules to obtain more 
 **Title 2:**
 
 *"Poisson-Boltzmann model for protein-surface electrostatic interactions and grid-convergence study using the PyGBe code"*
+
+[arXiv:1506.03745](http://arxiv.org/abs/1506.03745v1)
 
 *Abstract:*
 
