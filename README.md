@@ -2,6 +2,8 @@
 
 ## Submitted 2015
 
+[News posting and overview on the group website](http://lorenabarba.com/news/probing-protein-orientation-near-charged-surfaces/)
+
 **Title 1:**
 
 *"Probing protein orientation near charged nanosurfaces for  simulation-assisted biosensor design"*
