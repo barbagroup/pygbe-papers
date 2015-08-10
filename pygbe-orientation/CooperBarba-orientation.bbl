@@ -172,9 +172,9 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
   {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
   {Barba}},\ }\href@noop {} {\enquote {\bibinfo {title} {{Poisson-Boltzmann}
-  model for protein-surface interactions using the {PyGBe} code and
-  grid-convergence study},}\ } (\bibinfo {year} {2015}{\natexlab{a}}),\
-  \bibinfo {note} {preprint on arXiv, number pending.}\BibitemShut {Stop}%
+  model for protein-surface interactions and grid-convergence study using the
+  {PyGBe} code},}\ } (\bibinfo {year} {2015}{\natexlab{a}}),\ \bibinfo {note}
+  {preprint on arXiv, number pending.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Yao}\ and\ \citenamefont
   {Lenhoff}(2004)}]{YaoLenhoff2004}%
   \BibitemOpen
@@ -213,7 +213,7 @@
   {Juffer}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Argos}}, \
   and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {De~Vlieg}},\
   }\bibfield  {title} {\enquote {\bibinfo {title} {Adsorption of proteins onto
-  charged surfaces: a monte carlo approach with explicit ions},}\ }\href
+  charged surfaces: a {Monte Carlo} approach with explicit ions},}\ }\href
   {\doibase 0.1002/(SICI)1096-987X(199612)17:16<1783::AID-JCC1>3.0.CO;2-J}
   {\bibfield  {journal} {\bibinfo  {journal} {J. Comp.\ Chem.}\ }\textbf
   {\bibinfo {volume} {17}},\ \bibinfo {pages} {1783--1803} (\bibinfo {year}
@@ -259,12 +259,12 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont
   {Biesheuvel}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {van~der
   Veen}}, \ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Norde}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {A modified poisson-boltzmann
-  model including charge regulation for the adsorption of ionizable
-  polyelectrolytes to charged interfaces, applied to lysozyme adsorption on
-  silica},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
-  Phys.\ Chem.\ B}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo {pages}
-  {4172--4180} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+  }\bibfield  {title} {\enquote {\bibinfo {title} {A modified
+  {Poisson-Boltzmann} model including charge regulation for the adsorption of
+  ionizable polyelectrolytes to charged interfaces, applied to lysozyme
+  adsorption on silica},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Phys.\ Chem.\ B}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo
+  {pages} {4172--4180} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hartvig}\ \emph {et~al.}(2011)\citenamefont
   {Hartvig}, \citenamefont {van~de Weert}, \citenamefont {Ostergaard},
   \citenamefont {Jorgensen},\ and\ \citenamefont
@@ -363,7 +363,7 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~H.}\ \bibnamefont
   {Geng}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Krasny}},\
   }\bibfield  {title} {\enquote {\bibinfo {title} {A treecode-accelerated
-  boundary integral poisson-boltzmann solver for solvated biomolecules},}\
+  boundary integral {Poisson-Boltzmann} solver for solvated biomolecules},}\
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J. Comp.\ Phys.}\
   }\textbf {\bibinfo {volume} {247}},\ \bibinfo {pages} {62--78} (\bibinfo
   {year} {2013})}\BibitemShut {NoStop}%
@@ -408,9 +408,8 @@
   {Barba}},\ }\href {\doibase 10.6084/m9.figshare.154331} {\enquote {\bibinfo
   {title} {Validation of the \texttt{{PyGBe}} code for {P}oisson-{B}oltzmann
   equation with boundary element methods},}\ }\bibinfo {howpublished}
-  {Technical Report on \textbf{figshare}, CC-BY license,
-  \href{http://dx.doi.org/10.6084/m9.figshare.154331}{doi:10.6084/m9.figshare.154331}}
-  (\bibinfo {year} {2013})\BibitemShut {NoStop}%
+  {Technical Report on \textbf{figshare}, CC-BY license} (\bibinfo {year}
+  {2013})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Chan}\ and\ \citenamefont
   {Mitchell}(1983)}]{ChanMitchell1983}%
   \BibitemOpen
@@ -525,8 +524,8 @@
   {Buijs}}, \bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont {White}}, \
   and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Norde}},\ }\bibfield
    {title} {\enquote {\bibinfo {title} {The effect of adsorption on the antigen
-  binding by igg and its f (ab′) 2 fragments},}\ }\href@noop {} {\bibfield
-  {journal} {\bibinfo  {journal} {Colloids and Surfaces B: Biointerfaces}\
+  binding by {IgG} and its {F}(ab′) 2 fragments},}\ }\href@noop {} {\bibfield
+   {journal} {\bibinfo  {journal} {Colloids and Surfaces B: Biointerfaces}\
   }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {239--249} (\bibinfo
   {year} {1997})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2003)\citenamefont {Chen},
