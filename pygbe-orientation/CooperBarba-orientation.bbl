@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{42}%
+\begin{thebibliography}{43}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -517,6 +517,17 @@
   {note} {pMID: 23394469},\ \Eprint
   {http://arxiv.org/abs/http://dx.doi.org/10.1021/la3047966}
   {http://dx.doi.org/10.1021/la3047966} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bu}, \citenamefont {Vaknin},\ and\ \citenamefont
+  {Travesset}(2006)}]{BuVakninTravesset2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Bu}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Vaknin}}, \ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Travesset}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {How accurate is poisson-boltzmann theory
+  for monovalent ions near highly charged interfaces?}}\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Langmuir}\ }\textbf {\bibinfo
+  {volume} {22}},\ \bibinfo {pages} {5673--5681} (\bibinfo {year}
+  {2006})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Buijs}, \citenamefont {White},\ and\ \citenamefont
   {Norde}(1997)}]{BuijsETal1997}%
   \BibitemOpen
