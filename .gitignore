@@ -16,3 +16,5 @@ pygbe2-CPC/CooperBarba2014.spl
 *.log
 
 *.out
+
+*.gz
