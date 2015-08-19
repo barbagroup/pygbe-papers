@@ -517,6 +517,29 @@
   {note} {pMID: 23394469},\ \Eprint
   {http://arxiv.org/abs/http://dx.doi.org/10.1021/la3047966}
   {http://dx.doi.org/10.1021/la3047966} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Buijs}, \citenamefont {White},\ and\ \citenamefont
+  {Norde}(1997)}]{BuijsETal1997}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Buijs}}, \bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont {White}}, \
+  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Norde}},\ }\bibfield
+   {title} {\enquote {\bibinfo {title} {The effect of adsorption on the antigen
+  binding by {IgG} and its {F}(ab′) 2 fragments},}\ }\href@noop {} {\bibfield
+   {journal} {\bibinfo  {journal} {Colloids and Surfaces B: Biointerfaces}\
+  }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {239--249} (\bibinfo
+  {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2003)\citenamefont {Chen},
+  \citenamefont {Liu}, \citenamefont {Zhou},\ and\ \citenamefont
+  {Jiang}}]{ChenLiuZhouJiang2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Liu}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Zhou}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Jiang}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Controlling antibody orientation on charged self
+  assembled-monolayers},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {Langmuir}\ }\textbf {\bibinfo {volume} {19}},\ \bibinfo {pages}
+  {2859--2864} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bu}, \citenamefont {Vaknin},\ and\ \citenamefont
   {Travesset}(2006)}]{BuVakninTravesset2006}%
   \BibitemOpen
@@ -566,27 +589,4 @@
   complexes},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Journal of computational chemistry}\ }\textbf {\bibinfo {volume} {36}},\
   \bibinfo {pages} {585--596} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Buijs}, \citenamefont {White},\ and\ \citenamefont
-  {Norde}(1997)}]{BuijsETal1997}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Buijs}}, \bibinfo {author} {\bibfnamefont {D.~D.}\ \bibnamefont {White}}, \
-  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Norde}},\ }\bibfield
-   {title} {\enquote {\bibinfo {title} {The effect of adsorption on the antigen
-  binding by {IgG} and its {F}(ab′) 2 fragments},}\ }\href@noop {} {\bibfield
-   {journal} {\bibinfo  {journal} {Colloids and Surfaces B: Biointerfaces}\
-  }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {239--249} (\bibinfo
-  {year} {1997})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2003)\citenamefont {Chen},
-  \citenamefont {Liu}, \citenamefont {Zhou},\ and\ \citenamefont
-  {Jiang}}]{ChenLiuZhouJiang2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Chen}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Liu}}, \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Zhou}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {S.}~\bibnamefont {Jiang}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Controlling antibody orientation on charged self
-  assembled-monolayers},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo
-  {journal} {Langmuir}\ }\textbf {\bibinfo {volume} {19}},\ \bibinfo {pages}
-  {2859--2864} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
 \end{thebibliography}%
