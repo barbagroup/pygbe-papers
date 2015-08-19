@@ -296,6 +296,20 @@
   {pages} {720--729} (\bibinfo {year} {2014})},\ \bibinfo {note} {preprint on
   \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Altman}\ \emph {et~al.}(2009)\citenamefont {Altman},
+  \citenamefont {Bardhan}, \citenamefont {White},\ and\ \citenamefont
+  {Tidor}}]{AltmanBardhanWhiteTidor09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~D.}\ \bibnamefont
+  {Altman}}, \bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Bardhan}},
+  \bibinfo {author} {\bibfnamefont {J.~K.}\ \bibnamefont {White}}, \ and\
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Tidor}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Accurate solution of multi-region
+  continuum electrostatic problems using the linearized {Poisson}--{Boltzmann}
+  equation and curved boundary elements},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Comput. Chem.}\ }\textbf {\bibinfo
+  {volume} {30}},\ \bibinfo {pages} {132--153} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Yoon}\ and\ \citenamefont
   {Lenhoff}(1990)}]{YoonLenhoff1990}%
   \BibitemOpen
@@ -345,20 +359,6 @@
   {\bibinfo  {journal} {SIAM J. Sci. Comput.}\ }\textbf {\bibinfo {volume}
   {33}},\ \bibinfo {pages} {826--848} (\bibinfo {year} {2011})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Altman}\ \emph {et~al.}(2009)\citenamefont {Altman},
-  \citenamefont {Bardhan}, \citenamefont {White},\ and\ \citenamefont
-  {Tidor}}]{AltmanBardhanWhiteTidor09}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~D.}\ \bibnamefont
-  {Altman}}, \bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Bardhan}},
-  \bibinfo {author} {\bibfnamefont {J.~K.}\ \bibnamefont {White}}, \ and\
-  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Tidor}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Accurate solution of multi-region
-  continuum electrostatic problems using the linearized {Poisson}--{Boltzmann}
-  equation and curved boundary elements},}\ }\href@noop {} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Comput. Chem.}\ }\textbf {\bibinfo
-  {volume} {30}},\ \bibinfo {pages} {132--153} (\bibinfo {year}
-  {2009})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Geng}\ and\ \citenamefont
   {Krasny}(2013)}]{GengKrasny2013}%
   \BibitemOpen
