@@ -64,9 +64,7 @@ Using total free energy as the input, the integrals of Equation \eqref{eq:prob_a
 \begin{figure*}
    \centering
    \subfloat[Negative surface charge ($\alpha_\text{tilt}=172^\circ$, $\alpha_\text{rot}=110^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure6a.pdf} \label{fig:phi_sig-0.05}} 
-   %\subfloat[Surface charge density with negative surface charge]{\includegraphics[width=0.5\textwidth]{dphi_sig-005.pdf} \label{fig:dphi_sig-0.05}} \\
    \subfloat[Positive surface charge ($\alpha_\text{tilt}=8^\circ$, $\alpha_\text{rot}=150^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure6b.pdf} \label{fig:phi_sig0.05}} 
-   %\subfloat[Surface charge density with positive surface charge]{\includegraphics[width=0.5\textwidth]{dphi_sig005.pdf} \label{fig:dphi_sig0.05}}
    \caption{Electrostatic potential of protein \gb for the preferred orientations according to Figure \ref{fig:1PGB_probability}. Black arrow indicates direction of dipole-moment vector.}
    \label{fig:field}
 \end{figure*}
@@ -132,7 +130,7 @@ We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 4^\circ$ o
     \end{tabular}
 \end{table}
 
-With the computed total free energy, we obtained the probability of each orientation using Equation \eqref{eq:prob_angle} and the trapezoidal rule. %Figure \ref{fig:probability} shows the probability of the protein orientation in terms of $\cos(\alpha_{\text{tilt}})$, in intervals of $\Delta \cos(\alpha_{\text{tilt}}) = 0.05$ for Figure \ref{fig:1IGT_cos}, and $\Delta \alpha_{\text{tilt}}$=4$^{\circ}$ for Figure \ref{fig:1IGT_alpha}.  
+With the computed total free energy, we obtained the probability of each orientation using Equation \eqref{eq:prob_angle} and the trapezoidal rule.  
 We sampled all combinations with surface charges of $\sigma=\pm$0.05C/m$^2$ and $\sigma = \pm$ 0.1C/m$^2$ and salt concentrations of 145mM ($\kappa$ = 0.125 \AA$^{-1}$) and 37mM ($\kappa$ = 0.0625 \AA$^{-1}$). For each of these cases, Figures \ref{fig:1IGT_negcharge}  and \ref{fig:1IGT_poscharge} show a color plot of the probability distribution with respect to the tilt and rotation angles, and a 3D plot of the preferred orientation, where the solvent-excluded surface is colored by the electrostatic potential.
 
 % FIGURE 8
@@ -164,82 +162,3 @@ We sampled all combinations with surface charges of $\sigma=\pm$0.05C/m$^2$ and 
    \caption{Orientation probability distribution and surface potential of the preferred orientation for immunoglobulin G near a positive surface charge. The black arrow indicates the direction of the dipole moment, and the circles enclose the Fab fragments. Data sets, figure files and plotting scripts available under \ccby.\cite{CooperBarba2015-share1348802}}
    \label{fig:1IGT_poscharge}
 \end{figure*}
-
-
-%%% COMMENTED OUT SECTION
-\begin{comment}
-\begin{figure*}
-   \centering
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1IGT_cos.pdf} \label{fig:1IGT_cos}}
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1IGT_alpha.pdf} \label{fig:1IGT_alpha}}\\
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1IGT_2D_sig005.pdf} \label{fig:1IGT_2D_sig005}}
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1IGT_2D_sig-005.pdf} \label{fig:1IGT_2D_sig-005}}
-   \caption{Orientation distribution of immunoglobulin G. Figures \ref{fig:1IGT_cos} and \ref{fig:1IGT_alpha} are the probability with respect to the tilt angle and its cosine, respectively. Figures \ref{fig:1IGT_2D_sig005} and \ref{fig:1IGT_2D_sig-005} are the orientation with respect to both the tilt and rotation angle.}
-   \label{fig:1IGT_probability}
-\end{figure*}
-
-\begin{figure*}
-   \centering
-   \subfloat[Side view for $\alpha_{\text{tilt}} = 116^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.45\textwidth]{1IGT_3D_sig-005_til116_rot100_side.pdf} \label{fig:1IGT_sig-005_side}}
-   \subfloat[Top view for $\alpha_{\text{tilt}} = 116^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.45\textwidth]{1IGT_3D_sig-005_til116_rot100_top.pdf} \label{fig:1IGT_sig-005_top}}\\
-   \subfloat[Side view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 280^{\circ}$]{\includegraphics[width=0.45\textwidth]{1IGT_3D_sig005_til064_rot280_side.pdf} \label{fig:1IGT_sig005_side}}
-   \subfloat[Top view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 280^{\circ}$]{\includegraphics[width=0.45\textwidth]{1IGT_3D_sig005_til064_rot280_top.pdf} \label{fig:1IGT_sig005_top}}
-   \caption{Surface potential for Immunoglobulin G for the preferred orientation according to Figure  \ref{fig:1IGT_probability} for $\sigma$=-0.05 C/m$^2$ in Figures \ref{fig:1IGT_sig-005_side} and \ref{fig:1IGT_sig-005_top} and $\sigma$=0.05 C/m$^2$ in Figures \ref{fig:1IGT_sig005_side} and \ref{fig:1IGT_sig005_top}. The black arrow indicates the direction of the dipole moment.}
-   \label{fig:1IGT_3D}
-\end{figure*}
-\end{comment}
-%%% END COMMENT
-
-
-%%% COMMENTED OUT SECTION
-\begin{comment} 
-
-\subsection{Fc-protein G complex} \label{sec:FCC}
-
-We simulated the electrostatic field of the complex generated by the Fc fragment of immunoglobulin G and protein G B1 interacting with a $250\times10\times250$\AA \xspace block with surface charge density $\pm$0.05C/m$^2$, to find its preferred orientation. The protein was centered with respect to a  $250\times250$\AA \xspace face, 5\AA \xspace above it, and the orientation was defined by $\alpha_{\text{tilt}}$ and $\alpha_{\text{rot}}$, like in Section \ref{sec:PGB}. 
-
-In these cases, we considered a 0.150M of salt in the solvent, i.e. $\kappa=0.125$, with relative permittivity 80. The region inside the protein had a relative permittivity of 4.
-
- \paragraph*{Mesh refinement study for Fc-protein G complex}
-
-Similar to Section \ref{sec:PGB}, we performed a mesh refinement study to make sure the geometry was well resolved and to find appropriate simulation parameters for sampling different orientations. 
-
-In these runs, we evaluated the solvation energy and surface energy of a system with a surface with charge density 0.05C/m$^2$, and a protein with $\alpha_{\text{tilt}} = 100^{\circ}$ and $\alpha_{\text{rot}} = 45^{\circ}$. Using the results from runs with mesh density 2, 4, and 8 elements per square Angstrom, we added the solvation and surface energies, and extrapolated them using Richardson extrapolation to obtain -1390.59 kcal/mol, with observed order of convergence 1.1. This value is the reference to calculate the errors in Figure \ref{fig:1FCC_convergence}. 
-
-For the mesh refinement study, we used 1 Gauss points per far-away element, 19 Gauss points per close-by element, and 9 Gauss points per triangle side for the singular integral. The treecode had 6 terms in the Taylor expansion, a multipole-acceptance criterion of 0.5, and no more than 1000 boundary elements per box of the lowest level of the tree. Also, the GMRES tolerance was 10$^{-4}$. 
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.5\textwidth]{1FCC_convergence.pdf} 
-   \caption{Mesh convergence study of the solvation plus surface energy for the Fc-protein G complex interacting with a surface with charge density 0.05C/m$^2$.}
-   \label{fig:1FCC_convergence}
-\end{figure}
-
-Figure \ref{fig:1FCC_convergence} show errors that are decaying as $1/N$ for both the solvation and surface energies, indicating that the geometry is well resolved.
-
- \paragraph*{Probing orientation of Fc-protein G complex}
-
-We sampled the total free energy every $\Delta \alpha_{\text{tilt}} = 2^\circ$ of tilt angle and $\Delta \alpha_{\text{rot}} =20^\circ$ of rotation angle.  In these runs, meshes had 2 triangles per square angstrom throughout. We used 1 Gauss point per element further away than 2L of the collocation point, 19 Gauss points for close-by elements, and 9 Gauss points per side of the singular element. The treecode used 2 terms in the Taylor expansion, a multipole-acceptance criterion of 0.5 and no more than 300 elements per lowest level box. The GMRES tolerance was 10$^{-4}$. 
-
-The total free energy was the input for numerically computing the integrals in Equation \eqref{eq:prob_angle} with the trapezoidal rule. Figure \ref{fig:probability} shows the probability of the protein orientation in terms of $\cos(\alpha_{\text{tilt}})$, in intervals of $\Delta \cos(\alpha_{\text{tilt}}) = 0.05$ for Figure \ref{fig:1FCC_cos}, and $\Delta \alpha_{\text{tilt}}$=4$^{\circ}$ for Figure \ref{fig:1IGT_alpha}.  
-
-\begin{figure*}
-   \centering
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1FCC_cos.pdf} \label{fig:1FCC_cos}}
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1FCC_alpha.pdf} \label{fig:1FCC_alpha}}\\
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1FCC_2D_sig005.pdf} \label{fig:1FCC_2D_sig005}}
-   \subfloat[]{\includegraphics[width=0.45\textwidth]{1FCC_2D_sig-005.pdf} \label{fig:1FCC_2D_sig-005}}
-   \caption{Orientation distribution of Fc-protein G complex. Figures \ref{fig:1FCC_cos} and \ref{fig:1FCC_alpha} are the probability with respect to the tilt angle and its cosine, respectively. Figures \ref{fig:1FCC_2D_sig005} and \ref{fig:1FCC_2D_sig-005} are the orientation with respect to both the tilt and rotation angle.}
-   \label{fig:1FCC_probability}
-\end{figure*}
-
-\begin{figure*}
-   \centering
-      \subfloat[Side view for $\alpha_{\text{tilt}} = 20^{\circ}$ and $\alpha_{\text{rot}} = 160^{\circ}$]{\includegraphics[width=0.49\textwidth]{1FCC_sig005.pdf}\label{fig:1FCC_sig005}} 
-   \subfloat[Side view for $\alpha_{\text{tilt}} = 120^{\circ}$ and $\alpha_{\text{rot}} = 20^{\circ}$]{\includegraphics[width=0.49\textwidth]{1FCC_sig-005.pdf} \label{fig:1FCC_sig-005}}
-   \caption{Surface potential for Fc-protein G complex in the preferred orientation according to Figure \ref{fig:1FCC_probability} for $\sigma$=0.05 C/m$^2$ in Figure \ref{fig:1FCC_sig005}, and $\sigma$=-0.05 C/m$^2$ in Figure \ref{fig:1FCC_sig-005}. The black arrow indicates the direction of the dipole moment.}
-   \label{fig:1IGT_3D}
-\end{figure*}
-
-%%% END COMMENT OUT
-\end{comment} 

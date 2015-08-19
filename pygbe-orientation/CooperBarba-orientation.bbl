@@ -503,6 +503,17 @@
   CC-BY license,
   \href{http://dx.doi.org/10.6084/m9.figshare.1348801}{http://dx.doi.org/10.6084/m9.figshare.
   1348801}} (\bibinfo {year} {2015}{\natexlab{d}})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cooper}\ and\ \citenamefont
+  {Barba}(2015{\natexlab{e}})}]{CooperBarba2015-share1348802}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Cooper}}\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
+  {Barba}},\ }\href@noop {} {\enquote {\bibinfo {title} {Protein orientation
+  near charged surface using {PyGBe} with immunoglobulin {G}},}\ }\bibinfo
+  {howpublished} {Data, figures and plottings script on \textbf{figshare},
+  CC-BY license,
+  \href{http://dx.doi.org/10.6084/m9.figshare.1348802}{http://dx.doi.org/10.6084/m9.figshare.
+  1348802}} (\bibinfo {year} {2015}{\natexlab{e}})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mijajlovic}, \citenamefont {Penna},\ and\
   \citenamefont {Biggs}(2013)}]{MijajlovicETal2013}%
   \BibitemOpen
@@ -577,16 +588,4 @@
   {journal} {\bibinfo  {journal} {Biophys. J.}\ }\textbf {\bibinfo {volume}
   {76}},\ \bibinfo {pages} {1--16} (\bibinfo {year} {1999})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Fogolari}, \citenamefont {Corazza},\ and\
-  \citenamefont {Esposito}(2015)}]{FogolariETal2015}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Fogolari}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Corazza}}, \
-  and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Esposito}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Accuracy assessment of the
-  linear poisson--boltzmann equation and reparametrization of the obc
-  generalized born model for nucleic acids and nucleic acid--protein
-  complexes},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
-  {Journal of computational chemistry}\ }\textbf {\bibinfo {volume} {36}},\
-  \bibinfo {pages} {585--596} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
 \end{thebibliography}%
