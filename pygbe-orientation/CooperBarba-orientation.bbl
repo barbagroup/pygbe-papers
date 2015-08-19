@@ -174,7 +174,9 @@
   {Barba}},\ }\href@noop {} {\enquote {\bibinfo {title} {{Poisson-Boltzmann}
   model for protein-surface interactions and grid-convergence study using the
   {PyGBe} code},}\ } (\bibinfo {year} {2015}{\natexlab{a}}),\ \bibinfo {note}
-  {preprint on arXiv, number pending.}\BibitemShut {Stop}%
+  {submitted, preprint on
+  \href{http://arxiv.org/abs/1506.03745}{arXiv:1506.03745}}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Yao}\ and\ \citenamefont
   {Lenhoff}(2004)}]{YaoLenhoff2004}%
   \BibitemOpen
