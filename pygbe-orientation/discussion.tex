@@ -70,17 +70,19 @@ The advantage of a positive surface charge and a low ionic strength had been sug
 
 
  \medskip
-The main limitation of this study stems from the application of linearized Poisson-Boltzmann equation.
+A limitation of this study stems from the application of linearized Poisson-Boltzmann equation.
 Bu and co-workers\cite{BuVakninTravesset2006} assessed the accuracy of the Poisson-Boltzmann equation for highly charged surfaces ($\sim 0.4$C/m$^2$), getting good agreement of the model with experiments. 
 Rigorously, the linearized Poisson-Boltzmann equation is a valid approximation of the Poisson-Boltzmann equation when the nondimensional potential is smaller than 1 ($\phi q_e/k_BT<<1$).
 However, this restriction can be relaxed when calculating solvation energy. 
 For example, we ran a calculation using our boundary element code on an isolated \ig 2a immersed in a solvent with 37mM of salt ($\kappa = 0.0625$\AA$^{-1}$), with the parameters from Table \ref{table:params5}. 
 Computing the absolute value of the dimensionless potential on the molecular surface gives over $55\%$ of the triangles with $\phi q_e/k_BT>1$ and an average value of 1.5.
-Yet, using the linear or non-linear Poisson-Boltzmann models of APBS\cite{BakerETal2001}, the solvation energy for the isolated \ig 2a is the same, in this case.
-(The APBS runs used a volumetric mesh of $150\times 150\times 150$\AA\ with 449$^3$ nodes.)
-This observation is consistent with the results from Ref.~\onlinecite{Fogolari99} that show good agreement between linear and non-linear Poisson Boltzmann when the average dimensionless potential on the molecular surface is between -2 and 2. 
-The same authors also compared the two models for solvation energy calculations of nucleic acids, which are highly charged.\cite{FogolariETal2015} In that work, they made a distinction between the salt-dependent and salt-independent contributions to solvation energy, concluding that linear Poisson-Boltzmann accurately reproduced the salt-dependent contributions to solvation energy only for concentrations above 0.1M, however the total solvation energy agreed for a wide range of salt concentrations. 
-Placing a surface with charge $\sigma=0.1$C/m$^2$ next to \ig 2a in the configuration from Fig. \ref{fig:1IGT_3D_sig02_kap003125_til076-rot160}, the average absolute value of the dimensionless potential is 1.3, and it exceeds 1 in $51\%$ of the triangles, so we can expect the linearized Poisson Boltzmann to give a good approximation of the solvation energy.
+Yet, using the linear or non-linear Poisson-Boltzmann models of APBS,\cite{BakerETal2001} the solvation energy for the isolated \ig 2a is the same, in both cases.
+(The APBS tests used a volumetric mesh of $150\times 150\times 150$\AA\ with 449$^3$ nodes.)
+Adding a surface with charge $\sigma=0.1$C/m$^2$ next to \ig 2a in the configuration of Fig. \ref{fig:1IGT_3D_sig02_kap003125_til076-rot160}, the situation is similar: $51\%$ of the triangles have a dimensionless potential with absolute value exceeding 1 and the average is 1.3. By analogy with the isolated \ig 2 case, we expect linearized Poisson Boltzmann to give a good approximation of the solvation energy in this case.
+This conclusion is also consistent with the results of Ref.~\onlinecite{Fogolari99} that show good agreement between linear and non-linear Poisson Boltzmann when the average dimensionless potential on the molecular surface is between $-2$ and $2$. 
+The same authors also compared the two models for calculating solvation energy of nucleic acids, which are highly charged.\cite{FogolariETal2015} In that work, they distinguished between salt-dependent and salt-independent contributions to solvation energy, concluding that linear Poisson-Boltzmann accurately reproduces the salt-dependent contributions to solvation energy for concentrations above 0.1M.
+The total solvation energy, on the other hand, agreed for a wide range of salt concentrations. 
+
 
 Our results suggest that a high surface charge and low salt concentration increases the probability of the preferred configuration, and that better orientations are obtained with positive surface charge.
 We studied the orientation of \ig 2a near a surface with $\sigma =0.2$C/m${^2}$ and $\kappa=0.03125$\AA$^{-1}$ using our boundary element code, to see if this trend continues (Figure \ref{fig:1IGT_sigma02}). 
