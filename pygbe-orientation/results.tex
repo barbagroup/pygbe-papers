@@ -41,10 +41,10 @@ Using total free energy as the input, the integrals of Equation \eqref{eq:prob_a
 
 \begin{figure*}
    \centering
-   \subfloat[]{\includegraphics[width=0.43\textwidth]{Figure11a.pdf} \label{fig:1PGB_cos}}
-   \subfloat[]{\includegraphics[width=0.43\textwidth]{Figure11b.pdf} \label{fig:1PGB_alpha}}\\
-   \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure11c.pdf} \label{fig:1PGB_2D_sig005}}
-   \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure11d.pdf} \label{fig:1PGB_2D_sig-005}}
+   \subfloat[]{\includegraphics[width=0.43\textwidth]{Figure5a.pdf} \label{fig:1PGB_cos}}
+   \subfloat[]{\includegraphics[width=0.43\textwidth]{Figure5b.pdf} \label{fig:1PGB_alpha}}\\
+   \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure5c.pdf} \label{fig:1PGB_2D_sig005}}
+   \subfloat[]{\includegraphics[width=0.40\textwidth]{Figure5d.pdf} \label{fig:1PGB_2D_sig-005}}
    \caption{Orientation probability distribution of protein \gb. Figures \ref{fig:1PGB_cos} and \ref{fig:1PGB_alpha} are the probability with respect to the tilt angle and its cosine, respectively. Figures \ref{fig:1PGB_2D_sig005} and \ref{fig:1PGB_2D_sig-005} are the probability distributions with respect to both the tilt and rotation angles. Data sets, figure files and running/plotting scripts are available under \ccby.\cite{CooperBarba2015-share1348804}}
    \label{fig:1PGB_probability}
 \end{figure*}
@@ -63,9 +63,9 @@ Using total free energy as the input, the integrals of Equation \eqref{eq:prob_a
 
 \begin{figure*}
    \centering
-   \subfloat[Negative surface charge ($\alpha_\text{tilt}=172^\circ$, $\alpha_\text{rot}=110^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure12a.pdf} \label{fig:phi_sig-0.05}} 
+   \subfloat[Negative surface charge ($\alpha_\text{tilt}=172^\circ$, $\alpha_\text{rot}=110^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure6a.pdf} \label{fig:phi_sig-0.05}} 
    %\subfloat[Surface charge density with negative surface charge]{\includegraphics[width=0.5\textwidth]{dphi_sig-005.pdf} \label{fig:dphi_sig-0.05}} \\
-   \subfloat[Positive surface charge ($\alpha_\text{tilt}=8^\circ$, $\alpha_\text{rot}=150^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure12b.pdf} \label{fig:phi_sig0.05}} 
+   \subfloat[Positive surface charge ($\alpha_\text{tilt}=8^\circ$, $\alpha_\text{rot}=150^\circ$)]{\includegraphics[width=0.48\textwidth]{Figure6b.pdf} \label{fig:phi_sig0.05}} 
    %\subfloat[Surface charge density with positive surface charge]{\includegraphics[width=0.5\textwidth]{dphi_sig005.pdf} \label{fig:dphi_sig0.05}}
    \caption{Electrostatic potential of protein \gb for the preferred orientations according to Figure \ref{fig:1PGB_probability}. Black arrow indicates direction of dipole-moment vector.}
    \label{fig:field}
@@ -105,7 +105,7 @@ In this case, we computed the solvation energy and surface energy of a system co
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.45\textwidth]{Figure13.pdf} 
+   \includegraphics[width=0.45\textwidth]{Figure7.pdf} 
    \caption{Grid-convergence study of the solvation plus surface energy for immunoglobulin G interacting with a surface with charge density of 0.05C/m$^2$. Data sets, figure files and plotting scripts are available under \ccby.\cite{CooperBarba2015-share1348801}}
    \label{fig:1IGT_convergence}
 \end{figure}
@@ -138,14 +138,14 @@ We sampled all combinations with surface charges of $\sigma=\pm$0.05C/m$^2$ and 
 % FIGURE 8
 \begin{figure*} 
    \centering
-   \subfloat[Probability for $\sigma=-0.05$C/m$^2$, $\kappa=0.125$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure14a.pdf} \label{fig:1IGT_2D_sig-005}}
-   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 116^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure14b.pdf} \label{fig:1IGT_3D_sig-005_kap0125_til116-rot100}}\\
-   \subfloat[Probability for $\sigma=-0.1$C/m$^2$, $\kappa=0.125$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure14c.pdf} \label{fig:1IGT_2D_sig-020_kappa01250}}
-   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 36^{\circ}$ and $\alpha_{\text{rot}} = 300^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure14d.pdf} \label{fig:1IGT_3D_sig-02_kap0125_til056-rot040}}\\
-   \subfloat[Probability for $\sigma=-0.05$C/m$^2$, $\kappa=0.0625$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure14e.pdf} \label{fig:1IGT_2D_sig-005_kappa003125}}
-   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 40^{\circ}$ and $\alpha_{\text{rot}} = 340^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure14f.pdf} \label{fig:1IGT_3D_sig-005_kap003125_til116-rot160}}\\
-   \subfloat[Probability for $\sigma=-0.1$C/m$^2$, $\kappa=0.0625$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure14g.pdf} \label{fig:1IGT_2D_sig-020_kappa003125}}
-   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 40^{\circ}$ and $\alpha_{\text{rot}} = 40^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure14h.pdf} \label{fig:1IGT_3D_sig-02_kap003125_til124-rot140}}
+   \subfloat[Probability for $\sigma=-0.05$C/m$^2$, $\kappa=0.125$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure8a.pdf} \label{fig:1IGT_2D_sig-005}}
+   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 116^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure8b.pdf} \label{fig:1IGT_3D_sig-005_kap0125_til116-rot100}}\\
+   \subfloat[Probability for $\sigma=-0.1$C/m$^2$, $\kappa=0.125$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure8c.pdf} \label{fig:1IGT_2D_sig-020_kappa01250}}
+   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 36^{\circ}$ and $\alpha_{\text{rot}} = 300^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure8d.pdf} \label{fig:1IGT_3D_sig-02_kap0125_til056-rot040}}\\
+   \subfloat[Probability for $\sigma=-0.05$C/m$^2$, $\kappa=0.0625$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure8e.pdf} \label{fig:1IGT_2D_sig-005_kappa003125}}
+   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 40^{\circ}$ and $\alpha_{\text{rot}} = 340^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure8f.pdf} \label{fig:1IGT_3D_sig-005_kap003125_til116-rot160}}\\
+   \subfloat[Probability for $\sigma=-0.1$C/m$^2$, $\kappa=0.0625$\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure8g.pdf} \label{fig:1IGT_2D_sig-020_kappa003125}}
+   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 40^{\circ}$ and $\alpha_{\text{rot}} = 40^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure8h.pdf} \label{fig:1IGT_3D_sig-02_kap003125_til124-rot140}}
    \caption{Orientation probability distribution and surface potential of the preferred orientation for immunoglobulin G near a negative surface charge. The black arrow indicates the direction of the dipole moment, and the circles enclose the Fab fragments. Data sets, figure files and plotting scripts available under \ccby.\cite{CooperBarba2015-share1348801}}
    \label{fig:1IGT_negcharge}
 \end{figure*}
@@ -153,14 +153,14 @@ We sampled all combinations with surface charges of $\sigma=\pm$0.05C/m$^2$ and 
 
 \begin{figure*}
    \centering
-   \subfloat[Probability for $\sigma$=0.05C/m$^2$ and $\kappa$=0.125\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure15a.pdf} \label{fig:1IGT_2D_sig005}}
-   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 280^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure15b.pdf} \label{fig:1IGT_3D_sig005_kap0125_til064-rot280}}\\
-   \subfloat[Probability for $\sigma$=0.1C/m$^2$ and $\kappa$=0.125\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure15c.pdf} \label{fig:1IGT_2D_sig020_kappa01250}}
-   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 32^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure15d.pdf} \label{fig:1IGT_3D_sig02_kap0125_til064-rot260}}\\
-   \subfloat[Probability for $\sigma$=0.05C/m$^2$ and $\kappa$=0.0625\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure15e.pdf} \label{fig:1IGT_2D_sig005_kappa003125}}
-   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 44^{\circ}$ and $\alpha_{\text{rot}} = 120^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure15f.pdf} \label{fig:1IGT_3D_sig005_kap003125_til044-rot120}}\\
-   \subfloat[Probability for $\sigma$=0.1C/m$^2$ and $\kappa$=0.0625\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure15g.pdf} \label{fig:1IGT_2D_sig020_kappa003125}}
-   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 260^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure15h.pdf} \label{fig:1IGT_3D_sig02_kap003125_til076-rot160}}
+   \subfloat[Probability for $\sigma$=0.05C/m$^2$ and $\kappa$=0.125\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure9a.pdf} \label{fig:1IGT_2D_sig005}}
+   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 280^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure9b.pdf} \label{fig:1IGT_3D_sig005_kap0125_til064-rot280}}\\
+   \subfloat[Probability for $\sigma$=0.1C/m$^2$ and $\kappa$=0.125\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure9c.pdf} \label{fig:1IGT_2D_sig020_kappa01250}}
+   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 32^{\circ}$ and $\alpha_{\text{rot}} = 100^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure9d.pdf} \label{fig:1IGT_3D_sig02_kap0125_til064-rot260}}\\
+   \subfloat[Probability for $\sigma$=0.05C/m$^2$ and $\kappa$=0.0625\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure9e.pdf} \label{fig:1IGT_2D_sig005_kappa003125}}
+   \subfloat[y-z plane view for $\alpha_{\text{tilt}} = 44^{\circ}$ and $\alpha_{\text{rot}} = 120^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure9f.pdf} \label{fig:1IGT_3D_sig005_kap003125_til044-rot120}}\\
+   \subfloat[Probability for $\sigma$=0.1C/m$^2$ and $\kappa$=0.0625\AA$^{-1}$]{\includegraphics[width=0.4\textwidth]{Figure9g.pdf} \label{fig:1IGT_2D_sig020_kappa003125}}
+   \subfloat[x-y plane view for $\alpha_{\text{tilt}} = 64^{\circ}$ and $\alpha_{\text{rot}} = 260^{\circ}$]{\includegraphics[width=0.4\textwidth]{Figure9h.pdf} \label{fig:1IGT_3D_sig02_kap003125_til076-rot160}}
    \caption{Orientation probability distribution and surface potential of the preferred orientation for immunoglobulin G near a positive surface charge. The black arrow indicates the direction of the dipole moment, and the circles enclose the Fab fragments. Data sets, figure files and plotting scripts available under \ccby.\cite{CooperBarba2015-share1348801}}
    \label{fig:1IGT_poscharge}
 \end{figure*}
