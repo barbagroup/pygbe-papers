@@ -24,6 +24,9 @@ V_{L/Y}^{\Gamma_k} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma_j}
 \end{align}
 
 \noindent In Equation \eqref{eq:layers}, $G_L$ and $G_Y$ are the free-space Green's functions of the Poisson and linearized Poisson-Boltzmann equations, respectively. 
+The single-layer potential of a distribution $\psi$ on a surface $\Gamma$ evaluated at $\mathbf{r}$, $V^\mathbf{r}(\psi_\Gamma)$, can be interpreted as the potential on $\mathbf{r}$ due to a charge distribution $\psi$ on $\Gamma$. 
+Similarly, $K^\mathbf{r}(\psi_\Gamma)$ can be seen as the potential induced by a double layer of charges ($\psi$) with opposite sign at $\Gamma$.
+
 Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as follows:
 %
  \begin{align} \label{eq:matrix_dphi}
@@ -50,6 +53,6 @@ Rearranging terms, we write Equation \eqref{eq:integral_eq} in matrix form, as f
  \end{align}
 
 The boundary-integral formulation is not limited to represent the protein with a single surface, but can account for solvent-filled cavities inside the protein region and Stern layers.\cite{CooperBardhanBarba2013} In those cases, more than one surface is required to appropriately represent the protein. 
-This implementation follows the guidelines from Altman and co-workers to deal with multiple surfaces.
+Our implementation follows the guidelines from Altman and co-workers\cite{AltmanBardhanWhiteTidor09} to deal with multiple surfaces.
 
 The boundary-integral formulation of the implicit-solvent model is a popular alternative to compute solvation energies of proteins,\cite{YoonLenhoff1990, Juffer1991a, LuETal2006, BajajETal2011, AltmanBardhanWhiteTidor09, GengKrasny2013, CooperBardhanBarba2013} but the effect of charged surfaces has rarely been considered. The only work that we know of that does include these effects is limited to plane, infinite surfaces.\cite{YoonLenhoff1992} 

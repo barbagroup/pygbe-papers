@@ -7,7 +7,7 @@ According to the Boltzmann distribution, the probability of finding the system i
 P(\lambda) = \frac{\int_{\lambda} \exp \left(-\frac{F_\text{total}}{k_B T} \right) \text{d} \lambda}{\int_{\Lambda} \exp \left(-\frac{F_\text{total}}{k_B T} \right) \text{d} \Lambda},
 \end{equation} 
 
-\noindent where $\Lambda$ is the ensemble of all micro-states, $k_B$ is the Boltzmann constant and $T$ the temperature. To obtain a probability distribution, we assume that electrostatic effects are dominant and used Equation \eqref{eq:prob}, sampling $F_\text{total}$ for different orientations. We defined the orientation using the angle between the dipole moment and surface normal vectors as a reference (tilt angle), varying from 0$^\circ$ to 180$^\circ$. For each tilt angle, we rotated the protein about the dipole moment vector by 360$^\circ$ to examine all possible orientations. This process is sketched in Figure \ref{fig:1pgb_orientation}.
+\noindent where $\Lambda$ is the ensemble of all micro-states, $k_B$ is the Boltzmann constant and $T$ the temperature. To obtain a probability distribution, we assume that electrostatic effects are dominant and use Equation \eqref{eq:prob}, sampling $F_\text{total}$ for different orientations. We define the orientation using the angle between the dipole moment and surface normal vectors as a reference (tilt angle), varying from 0$^\circ$ to 180$^\circ$. For each tilt angle, we rotate the protein about the dipole moment vector by 360$^\circ$ to examine all possible orientations. This process is sketched in Figure \ref{fig:1pgb_orientation}.
 
 In this case, micro-states are defined by the tilt ($\alpha_{\text{tilt}}$) and rotational ($\alpha_{\text{rot}}$) angles, and we rewrite the integral in the numerator of Equation \eqref{eq:prob} as:
 %
@@ -16,11 +16,12 @@ In this case, micro-states are defined by the tilt ($\alpha_{\text{tilt}}$) and 
 \end{equation}
 
 \noindent where micro-state $\lambda$ is a range of angles $\alpha_{\text{rot}}$ and $\alpha_{\text{tilt}}$. 
+In biosensors, the ligand is adsorbed on the surface (usually covalently), hence we are interested on the orientation of the molecule very close to the surface, and don't consider configurations away from it.  
 
 
 \begin{figure}%[h] 
    \centering
-   \includegraphics[width=0.5\textwidth]{Figure4.pdf}
+   \includegraphics[width=0.5\textwidth]{Figure2.pdf}
    \caption{Setup of the problem for our orientation-sampling studies.}
    \label{fig:1pgb_orientation}
 \end{figure}
@@ -33,14 +34,14 @@ In both cases, the vector orientation of the dipole moment (used as reference fo
 
 \begin{figure}%[h] 
    \centering
-   \includegraphics[width=0.25\textwidth]{Figure5.pdf}
+   \includegraphics[width=0.25\textwidth]{Figure3.pdf}
    \caption{Structure of protein \gb (\pdb code {\small 1PGB}).}
    \label{fig:1pgb}
 \end{figure}
 
 \begin{figure}%[h] 
    \centering
-   \includegraphics[width=0.35\textwidth]{Figure6.pdf}
+   \includegraphics[width=0.35\textwidth]{Figure4.pdf}
    \caption{Structure of immunoglobulin G (\pdb code {\small 1IGT}).}
    \label{fig:1igt}
 \end{figure}

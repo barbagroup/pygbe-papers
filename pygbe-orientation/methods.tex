@@ -10,8 +10,8 @@ V_{L,ij} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \m
 \end{align}
 
 We classify the integrals in Equation \eqref{eq:layers_element} in three groups, depending on the distance $d$ between the panel and the collocation point. 
-When the collocation point is inside the panel being integrated, we get a singular integral which we solve with a semi-analytical approach\cite{ZhuHuangSongWhite2001} that places Gauss nodes on the sides of the triangle. 
+When the collocation point is inside the panel being integrated, we get a singular integral that we solve with a semi-analytical approach\cite{ZhuHuangSongWhite2001} placing Gauss nodes on the sides of the triangle. 
 We call near-singular integrals those where $d<2L$ ($L = \sqrt{2\cdot \text{Area}}$). For near-singular integrals, we use a high-order Gauss quadrature rule with 19 or more nodes. 
-Finally, when the panel and collocation point are further than $2L$ from each other, we only need 1, 3, 4 or 7 Gauss nodes per element to get good accuracy.
+Finally, when the panel and collocation points are further than $2L$ from each other, we only need 1, 3, 4 or 7 Gauss nodes per element to get good accuracy.
 
-To solve the resulting linear system, we use a general minimal residual method (\gmres). The most time consuming part of the \gmres solver is a matrix-vector multiplication---in principle, an $O(N^2)$ operation---done within every iteration of the solver. But by using of a treecode algorithm, we perform this operation in $O(N\log N)$ time.\cite{BarnesHut1986} More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}
+To solve the resulting linear system, we use a general minimal residual method (\gmres). The most time consuming part of the \gmres solver is a matrix-vector multiplication---in principle, an $O(N^2)$ operation---done within every iteration of the solver. But by using a treecode algorithm, we perform this operation in $O(N\log N)$ time.\cite{BarnesHut1986} More details on our implementation of the \bem can be found in our earlier work,\cite{CooperBarba-share154331} and a companion paper.\cite{CooperBarba2015a}
