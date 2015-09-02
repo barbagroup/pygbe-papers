@@ -51,11 +51,11 @@ Y.~Yao, A.~M. Lenhoff, Electrostatic contributions to protein retention in
 
 \bibitem{YaoLenhoff2005}
 Y.~Yao, A.~M. Lenhoff, Electrostatic contributions to protein retention in
-  ion-exchange chromatography. 2. proteins with vaious degrees of structural
+  ion-exchange chromatography. 2. {P}roteins with various degrees of structural
   differences., Anal.\ Chem. 77 (2005) 2157--2165.
 
 \bibitem{RothNealLenhoff1996}
-C.~M. Roth, B.~L. Neal, A.~M. Lenhoff, Van del {W}aals interactions involving
+C.~M. Roth, B.~L. Neal, A.~M. Lenhoff, Van der {W}aals interactions involving
   proteins, Biophys.\ J. 70 (1996) 977--987.
 
 \bibitem{CooperBarba-share154331}
@@ -93,9 +93,9 @@ B.~J. Yoon, A.~M. Lenhoff, A boundary element method for molecular
   1080--1086.
 
 \bibitem{Juffer1991a}
-A.~H. Juffer, E.~F.~F. Botta, B.~A.~M. Vankeulen, A.~Vanderploeg, H.~J.~C.
-  Berendsen, {The} electric potential of a macromolecule in a solvent: {A}
-  fundamental approach, Journal of Computational Physics 97 (1991) 144--171.
+A.~H. Juffer, E.~F.~F. Botta, B.~A.~M. {v}an {K}eulen, A.~{v}an~{d}er {P}loeg,
+  H.~J.~C. Berendsen, {The} electric potential of a macromolecule in a solvent:
+  {A} fundamental approach, J. Comput.\ Phys. 97 (1991) 144--171.
 
 \bibitem{LuETal2006}
 B.~Lu, X.~Cheng, J.~Huang, J.~A. McCammon, Order {$N$} algorithm for
@@ -119,7 +119,7 @@ M.~D. Altman, J.~P. Bardhan, J.~K. White, B.~Tidor, Accurate solution of
 
 \bibitem{GengKrasny2013}
 W.~H. Geng, R.~Krasny, A treecode-accelerated boundary integral
-  {Poisson-Boltzmann} solver for solvated biomolecules, J. Comp.\ Phys. 247
+  {Poisson-Boltzmann} solver for solvated biomolecules, J. Comput.\ Phys. 247
   (2013) 62--78.
 
 \bibitem{HessSmith1967}
@@ -151,7 +151,7 @@ J.~R. Phillips, J.~K. White, A precorrected-{FFT} method for electrostatic
 
 \bibitem{LiJohnstonKrasny2009}
 P.~Li, H.~Johnston, R.~Krasny, A {Cartesian} treecode for screened {Coulomb}
-  interactions, J. Comp.\ Phys. 228 (2009) 3858--3868.
+  interactions, J. Comput.\ Phys. 228 (2009) 3858--3868.
 
 \bibitem{ChanMitchell1983}
 D.~Y. Chan, D.~J. Mitchell, The free energy of an electrical double layer, J.
