@@ -78,7 +78,8 @@ We computed the solvation and surface energy using meshes with 1, 2, 4 and 8 ele
 Using Richardson extrapolation and the result of the three finest meshes we calculated an approximate exact solution, shown in Table \ref{table:extraPGB}, which we consider as a reference to calculate estimated errors. 
 The errors plotted in Figures \ref{fig:convergence_1PGB_isolated} and \ref{fig:convergence_1PGB_sensor} are the relative differences between the energy obtained with Richardson extrapolation and the results computed with each mesh.  
 They decay as $1/N$ in both the solvation and surface energies for the finest three meshes, indicating that the calculations are in the asymptotic region and the geometry is well resolved in these cases.
-The observed order of convergence is 0.95 for the solvation energy and 1.12 for the surface energy in the isolated cases, and 0.96 for the solvation energy and 0.94 for the surface energy when the protein and surface were interacting. 
+The observed order of convergence is 0.95 for the solvation energy and 1.12 for the surface energy in the isolated cases, and 0.96 for the solvation energy and 0.94 for the surface energy when the protein and surface were interacting.
+The values of observed order of convergence are close to 1, confirming that our calculations are in the linear-convergence regime. 
 Using the extrapolated values from Table \ref{table:extraPGB}, we obtain an interaction free energy of $-7.6$ [kcal/mol].
 For details on the Richardson-extrapolation method for performing grid-convergence analysis, see our previous work \cite{CooperBardhanBarba2013}.
 
