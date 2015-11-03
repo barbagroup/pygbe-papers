@@ -82,6 +82,7 @@ The observed order of convergence is 0.95 for the solvation energy and 1.12 for 
 The values of observed order of convergence are close to 1, confirming that our calculations are in the linear-convergence regime. 
 Using the extrapolated values from Table \ref{table:extraPGB}, we obtain an interaction free energy of $-7.6$ [kcal/mol].
 For details on the Richardson-extrapolation method for performing grid-convergence analysis, see our previous work \cite{CooperBardhanBarba2013}.
+For completeness, we have added the iteration count of the Krylov solver and time required to calculate the solvation and surface energies, in figures \ref{fig:1PGB_time} and \ref{fig:1PGB_iterations}.
 
 \begin{table}[h]
   %\centering
@@ -125,4 +126,18 @@ For details on the Richardson-extrapolation method for performing grid-convergen
    \includegraphics[width=0.45\textwidth]{Figure10.pdf} 
    \caption{Grid-convergence study of the solvation and surface energy for protein \gb mutant, interacting with a surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
    \label{fig:convergence_1PGB_sensor}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.45\textwidth]{1PGB_time.pdf} 
+   \caption{Total time to compute the solvation and surface energies of protein \gb mutant near a charged surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
+   \label{fig:1PGB_time}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.45\textwidth]{1PGB_iterations.pdf} 
+   \caption{Number of iterations for the Krylov solver to converge for protein \gb mutant near a charged surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
+   \label{fig:1PGB_iterations}
 \end{figure}
