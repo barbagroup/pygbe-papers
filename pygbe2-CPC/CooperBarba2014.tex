@@ -120,7 +120,8 @@ We extended the implicit-solvent model used in the open-source code PyGBe to inc
 We derived an analytical solution for a spherical charged surface interacting with a spherical dielectric cavity, and used it in a grid-convergence study to build evidence on the correctness of our approach. The study showed the error decaying with the average area of the boundary elements, i.e., the method is $O(1/N)$, which is consistent with our previous verification studies using PyGBe.
 We also studied grid-convergence using a real molecular geometry (protein \gb), in this case using Richardson extrapolation (in the absence of an analytical solution) and confirmed the $O(1/N)$ scaling in this case.
 With this work, we can now access a completely new family of problems, which no other major bioelectrostatics solvers, e.g. APBS, is capable of dealing with.
-PyGBe is open-source under an MIT license and is hosted under version control at \href{https://github.com/barbagroup/pygbe}{https://github.com/barbagroup/pygbe}. In addition, we prepared ``reproducibility packages''  to supplement this paper, consisting of running and post-processing scripts in Python to allow replication of the grid-convergence studies, all the way to generating the final plots, with a single command.
+PyGBe is open-source under an MIT license and is hosted under version control at \href{https://github.com/barbagroup/pygbe}{https://github.com/barbagroup/pygbe}. 
+To supplement this paper, we prepared ``reproducibility packages.'' consisting of running and post-processing scripts in Python for replicating the grid-convergence studies, all the way to generating the final plots, with a single command.
 \end{abstract}
 
 \begin{keyword}
