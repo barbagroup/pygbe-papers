@@ -13,7 +13,7 @@ Using the analytical solution detailed in Section \ref{sec:analytical_solution},
    \label{fig:twosphere_num}
 \end{figure}
 
-Figure \ref{fig:error_sphere} presents the results of the grid-convergence analysis, where the error is the relative difference in interaction free energy between the analytical result from Section \ref{sec:analytical_solution} and the numerical solution computed with \pygbe. The observed order of convergence of the three finest meshes was 1.007. Table \ref{table:params1} presents the numerical parameters used in this case. Recall from section \ref{sec:methods} that we calculate the boundary-element integrals differently for close-by and far-away elements, and use a semi-analytical method for the element that contains the collocation point. The fine Gauss quadrature rule is used for elements closer than $2L$ from the collocation point, where $L=\sqrt{2\cdot \text{Area}}$. For the treecode,  $N_{\text{crit}}$ is the maximum number of boundary elements per box, $P$ is the Taylor expansion truncation parameter and $\theta$ is the multipole-acceptance criterion. The final numerical parameter is the exit tolerance of the \textsc{gmres} solver.
+Figure \ref{fig:error_sphere} presents the results of the grid-convergence analysis, where the error is the relative difference in interaction free energy between the analytical result from Section \ref{sec:analytical_solution} (using the first 20 terms of the expansion in Equation \eqref{G_p_int}) and the numerical solution computed with \pygbe. The observed order of convergence of the three finest meshes was 1.007. Table \ref{table:params1} presents the numerical parameters used in this case. Recall from section \ref{sec:methods} that we calculate the boundary-element integrals differently for close-by and far-away elements, and use a semi-analytical method for the element that contains the collocation point. The fine Gauss quadrature rule is used for elements closer than $2L$ from the collocation point, where $L=\sqrt{2\cdot \text{Area}}$. For the treecode,  $N_{\text{crit}}$ is the maximum number of boundary elements per box, $P$ is the Taylor expansion truncation parameter and $\theta$ is the multipole-acceptance criterion. The final numerical parameter is the exit tolerance of the \textsc{gmres} solver.
 
 \begin{table}[h]
   %\centering
@@ -74,13 +74,15 @@ The rotation angle $\alpha_{\text{rot}}$ is the angle between the normal vector 
 \end{figure}
 
 In this test, the solvent has no salt, i.e., $\kappa=0$, and its relative permittivity was 80. The region inside the protein had a relative permittivity of 4.
-We computed the solvation and surface energy using meshes with 1, 2, 4 and 8 elements per square Angstrom with the parameters detailed in Table \ref{table:params2}. 
+We computed the solvation and surface energy using meshes with 1, 2, 4 and 8 elements per square Angstrom on the protein and the charged surface, with the parameters detailed in Table \ref{table:params2}. 
 Using Richardson extrapolation and the result of the three finest meshes we calculated an approximate exact solution, shown in Table \ref{table:extraPGB}, which we consider as a reference to calculate estimated errors. 
 The errors plotted in Figures \ref{fig:convergence_1PGB_isolated} and \ref{fig:convergence_1PGB_sensor} are the relative differences between the energy obtained with Richardson extrapolation and the results computed with each mesh.  
 They decay as $1/N$ in both the solvation and surface energies for the finest three meshes, indicating that the calculations are in the asymptotic region and the geometry is well resolved in these cases.
-The observed order of convergence is 0.95 for the solvation energy and 1.12 for the surface energy in the isolated cases, and 0.96 for the solvation energy and 0.94 for the surface energy when the protein and surface were interacting. 
+The observed order of convergence is 0.95 for the solvation energy and 1.12 for the surface energy in the isolated cases, and 0.96 for the solvation energy and 0.94 for the surface energy when the protein and surface were interacting.
+The values of observed order of convergence are close to 1, confirming that our calculations are in the linear-convergence regime. 
 Using the extrapolated values from Table \ref{table:extraPGB}, we obtain an interaction free energy of $-7.6$ [kcal/mol].
 For details on the Richardson-extrapolation method for performing grid-convergence analysis, see our previous work \cite{CooperBardhanBarba2013}.
+For completeness, we report the time required to calculate the solvation and surface energies and the iteration count of the Krylov solver, in figures \ref{fig:1PGB_time} and \ref{fig:1PGB_iterations}.
 
 \begin{table}[h]
   %\centering
@@ -124,4 +126,18 @@ For details on the Richardson-extrapolation method for performing grid-convergen
    \includegraphics[width=0.45\textwidth]{Figure10.pdf} 
    \caption{Grid-convergence study of the solvation and surface energy for protein \gb mutant, interacting with a surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
    \label{fig:convergence_1PGB_sensor}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.45\textwidth]{1PGB_time.pdf} 
+   \caption{Total time to compute the solvation and surface energies of protein \gb mutant near a charged surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
+   \label{fig:1PGB_time}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.45\textwidth]{1PGB_iterations.pdf} 
+   \caption{Number of iterations for the Krylov solver to converge for protein \gb mutant near a charged surface with a charge density of 0.05C/m$^2$. Data sets, figure files and running/plotting scripts available under \ccby \cite{CooperBarba2015-share1348803}}.
+   \label{fig:1PGB_iterations}
 \end{figure}
